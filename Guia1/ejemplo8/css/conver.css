@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url("fondo.jpg");
+    background-size: 100%;
+}
+
+h1{
+    background: rgba(0,155,125,0.8);
+    color: #FFFFFF;
+    font-family: century gothic;
+    padding: 6px 0;
+    text-align: center;
+}
+
+.menu{  
+	overflow:hidden;  
+	width: 100%;  
+}  
+
+.menu a span{  
+	position:relative;  
+	top:40%;  
+}
+
+.menu .pies:hover{  
+	background-image: url("pies.png"); 
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.menu .pulgadas:hover{  
+	background-image: url("pulgada.jpg"); 
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.menu .yardas:hover{  
+	background-image: url("yarda.jpg"); 
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.menu li{  
+	display: inline;  
+	margin: 0;  
+}
+
+.menu li a{  
+	background:#b72236;  
+    border-radius: 50%;
+    -webkit-box-shadow: 5px 5px 3px 0px rgba(75,25,25,0.75);
+    -moz-box-shadow: 5px 5px 3px 0px rgba(75,25,25,0.75);
+    -o-box-shadow: 5px 5px 3px 0px rgba(75,25,25,0.75);
+    -ms-box-shadow: 5px 5px 3px 0px rgba(75,25,25,0.75);
+    box-shadow: 5px 5px 3px 0px rgba(75,25,25,0.75);
+	color: white;  
+	display:inline-block;  
+	height:200px;  
+	margin-right:5px; 
+	margin: 0;  
+	text-align: center;  
+	text-decoration: none;  
+	width:200px; 	  
+}  
+  
+.menu li a:visited{  
+	color: white;  
+}
+
+.menu ul{  
+	font: bold 14px Verdana;  
+	list-style-type: none;  
+	margin: 36px auto;  
+	padding: 0;  
+	text-align: center;
+}
+
+.menu ul li {
+    margin: 0 12px;
+}
+
+p{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    font-family: century gothic;
+    background-color: rgba(0,155,125,0.8); ;
+}

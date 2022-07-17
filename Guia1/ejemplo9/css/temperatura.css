@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    background-image: url("fondo.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+h1{
+    background: rgba(0,155,125,0.8);
+    color: #FFFFFF;
+    font-family: century gothic;
+    padding: 6px 0;
+    text-align: center;
+}
+
+p{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    font-family: century gothic;
+    background-color: rgba(0,155,125,0.8); ;
+}

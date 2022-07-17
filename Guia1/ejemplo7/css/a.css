@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    background-color: black;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+h1{
+    color: white;
+    font-family: CENTURY GOTHIC;
+    font-size: 50px;
+    text-align: center;
+}
+
+ul{
+    color: white;
+    font-family: CENTURY GOTHIC;
+    font-size: 20px;
+}
