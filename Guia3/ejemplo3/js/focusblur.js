@@ -16,31 +16,31 @@ var arregloAyuda = [
 //Inicializar el elemento textoAyudaDiv y registrar los manejadores de eventos
 //para los distintos controles de formulario
 function inic(){
-    textoAyuda = document.getElementById("textoAyuda");
-    //Registrar los escuchadores de eventos
-    registrarEscuchas(document.getElementById("firstname"), 0);
-    registrarEscuchas(document.getElementById("lastname"), 1);
-    registrarEscuchas(document.getElementById("email"), 2);
-    registrarEscuchas(document.getElementById("phone"), 3);
-    registrarEscuchas(document.getElementById("describe"), 4);
-    registrarEscuchas(document.getElementById("profesion"), 5);
-    registrarEscuchas(document.getElementById("selpais"), 6);
-    registrarEscuchas(document.getElementById("resetbtn"), 7);
-    registrarEscuchas(document.getElementById("submitbtn"), 8);
+textoAyuda = document.getElementById("textoAyuda");
+//Registrar los escuchadores de eventos
+registrarEscuchas(document.getElementById("firstname"), 0);
+registrarEscuchas(document.getElementById("lastname"), 1);
+registrarEscuchas(document.getElementById("email"), 2);
+registrarEscuchas(document.getElementById("phone"), 3);
+registrarEscuchas(document.getElementById("describe"), 4);
+registrarEscuchas(document.getElementById("profesion"), 5);
+registrarEscuchas(document.getElementById("selpais"), 6);
+registrarEscuchas(document.getElementById("resetbtn"), 7);
+registrarEscuchas(document.getElementById("submitbtn"), 8);
 }
 //Función que determina qué mensaje de ayuda habilitar
 //con base en el numeroMensaje enviado como segundo argumento
 function registrarEscuchas(objeto, numeroMensaje){
-    //Asociar el manejador de eventos onfocus dependiendo
-    //del objeto y numeroMensaje recibidos como argumentos
-    objeto.addEventListener("focus", function(){
-    textoAyuda.style.visibility = "visible";
-    textoAyuda.innerHTML = arregloAyuda[numeroMensaje];
-    }, false);
-    objeto.addEventListener("blur", function(){
-    textoAyuda.style.visibility = "hidden";
-    textoAyuda.innerHTML = arregloAyuda[9];
-    }, false);
+//Asociar el manejador de eventos onfocus dependiendo
+//del objeto y numeroMensaje recibidos como argumentos
+objeto.addEventListener("focus", function(){
+textoAyuda.style.visibility = "visible";
+textoAyuda.innerHTML = arregloAyuda[numeroMensaje];
+}, false);
+objeto.addEventListener("blur", function(){
+textoAyuda.style.visibility = "hidden";
+textoAyuda.innerHTML = arregloAyuda[9];
+}, false);
 }
 //Desencadenando la función inic al cargar el documento
 window.addEventListener("load", inic, false);
