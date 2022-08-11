@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>BIBLIOTECA XD</title>
+        <meta charset="utf-8" />
+        <!-- <link rel="stylesheet" href="css/basic.css" /> -->
+        <!-- <link rel="stylesheet" href="css/estilosform.css"> -->
+        <link rel="stylesheet" href="css/basi.css" />
+        <link rel="stylesheet" href="css/estiloform.css" />
+        <script src="js/biblioteca.js"></script>
+    </head>
+
+    <body>
+        <header id="insetBg">
+            <h1 class="insetType">Josu's Biblioteca</h1>
+        </header>
+
+        <section>
+            <article id="design">
+                <form action="javascript:void(0);" action="POST" name="frmconf" id="form" class="contact">
+                        <div class="contact-input">
+                            <label for="selopcioneusu"><span>Seleccione el tipo de usuario: </span>
+                                <select name="selopcioneusu" id="usu" class="seloptions">
+                                    <option value="" selected="selected">Tipo de usuario</option>
+                                    <option value="alumno">Alumno</option>
+                                    <option value="docente">Docente</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </label>
+                        </div>
+                        <br>
+                        <label for="carnet"><span>Ingrese su carnet:</span>
+                        <input type="text" name="txtcarnet" id="txtkey" placeholder="Ingrese su carnet" class="formInputText" /></label>
+                        <br><br>
+                        <label for="selcontrol" class="select"><span>Ingrese la categoria de libro:</span>
+                            <select name="selcontrol" id="selcontrol">
+                                <option value="ciencias">Ciencias Básicas y tecnología</option>
+                                <option value="Tesis">Tesis</option>
+                                <option value="Obra">Obra Literaria</option>
+                            </select>
+                        </label>
+
+                        <div class="contact-submit">
+                            <input type="submit" name="cmdenviar" value="Enviar" />
+                        </div>
+                    
+                </form>
+            </article>
+            <article id="view"></article>
+        </section>
+
+        <footer>Se hizo lo que se pudo :c, solo la categoria de libro medio sirve :c</footer>
+    </body>
+</html>    
