@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/index.css">
+        
+        <title>MENÚ - ANDRE´S Y JOSU´S RESTAURANT</title>
+    </head>
+    <body>
+        <div class="fondo">
+            <img src="img/fondo.jpg" alt="">
+        </div>
+
+        <h1 class="ini">ANDRE´S Y JOSU´S RESTAURANT</h1>
+        <br>
+        <div action="javascript:void(0);" id="formMenu" class="formularioo">
+        <form action="">
+            <h3>Super Combo</h3>
+            <b><p>Precio: $7.25</p></b>
+            <ul>
+                <li>3 piezas de pollo</li>
+                <li>ensalada</li>
+                <li>papas fritas</li>
+                <li>bebida grande</li>
+            </ul>
+            <b><label ><input type="radio" name="combo" checked value="7.25"> Super Combo</label></b>
+            <h3>Combo personal</h3>
+            <b><p>Precio: $5.75</p></b>
+            <ul>
+                <li>2 piezas de pollo</li>
+                <li>papas fritas</li>
+                <li>bebida mediana</li>
+            </ul>
+            <b><label ><input type="radio" name="combo" value="5.75"> Combo Personal</label></b>
+            <h3>Combo infantil</h3>
+            <b><p>Precio: $3.50</p></b>
+            <ul>
+                <li>1 pieza de pollo</li>
+                <li>papas fritas</li>
+                <li>bebida pequeña</li>
+            </ul>
+            <b><label ><input type="radio" name="combo" value="3.50"> Combo Infantil</label></b><br>
+            <input type="hidden" name="totalCombo" value="0.00">
+
+            <h3>Productos extras: </h3>
+            <div id="ingreX" class="form-check">
+                <label><input type="checkbox" id="ensalada" value="1.50"> Ensalada <br> $1.50</label><br>
+                <div id="cantEns"></div>
+                <label><input type="checkbox" id="papas" value="1.25"> Papas fritas <br> $1.25</label><br>
+                <div id="cantPa"></div>
+                <label><input type="checkbox" id="PolloG" value="1.75"> Pieza de pollo grande <br> $1.75</label><br>
+                <div id="cantPoG"></div>
+                <label><input type="checkbox" id="PolloM" value="1.50"> Pieza de pollo mediana <br> $1.50</label><br>
+                <div id="cantPoM"></div>
+                <label><input type="checkbox" id="PolloP" value="1.25"> Pieza de pollo pequeña <br> $1.25 </label><br>
+                <div id="cantPoP"></div>
+                <label><input type="checkbox" id="BebidaG" value="1.50"> Bebida grande <br> $1.50</label><br>
+                <div id="cantBeG"></div>
+                <label><input type="checkbox" id="BebidaM" value="1.25"> Bebida mediana <br> $1.25</label><br>
+                <div id="cantBeM"></div>
+                <label><input type="checkbox" id="BebidaP" value="1.00"> Bebida pequeña <br> $1.00</label><br>
+                <div id="cantBeP"></div>
+                <label><input type="checkbox" id="cafe" value="0.50"> Café <br> $0.50</label><br>
+                <div id="cantCafe"></div>
+                <label><input type="checkbox" id="cafe" value="1.25"> Postre <br> $1.25</label><br>
+                <div id="cantPostre"></div>
+                <input type="hidden" name="totalExtra" value="0.00" />
+            </div>
+
+            <label>
+                Total: $<input type="text" name="total" class="num" value="0.00"
+                readonly="readonly" disabled/>
+            </label>
+            <br>
+            
+            <h3>Agregar comentarios a la orden: </h3>
+            <textarea name="" id="coment" cols="30" rows="10" disabled></textarea>
+        <br><br>
+            <input type="reset" name="Enviar" id="Enviar" value="Enviar Orden" class="btn btn-success" >
+        </form>
+    </div>
+    <script src="js/menu.js"></script>
+    </body>
+</html>

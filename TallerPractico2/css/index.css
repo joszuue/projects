@@ -1,0 +1,38 @@
+body{
+    background-color: #F1ECE7;
+    font-family: Century gothic;
+    color: #114358;
+}
+
+h3{
+    color: #114358;
+}
+
+.ini{
+    text-align: center;
+    font-family: Arial Black;
+}
+
+.fondo img{
+    width: 1340px;
+    height: 500px;
+}
+
+form {
+    margin: 3px 3px;
+    background-color: #FFFFFF;
+    height: max-content;
+    width: 500px;
+    border-radius: 20px;
+    padding-left: 30px;
+    
+}
+
+.formularioo{
+    display: flex;
+    justify-content: center;
+}
+
+.opcion {
+    color: #2ECC71 ;
+}

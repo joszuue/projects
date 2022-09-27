@@ -1,0 +1,19 @@
+body{
+    background-color: #F1ECE7;
+    font-family: Century gothic;
+    color: #114358;
+}
+
+.ini{
+    text-align: center;
+    font-family: Arial Black;
+}
+
+.tarjeta{
+    margin: 3px 3px;
+    background-color: #FFFFFF;
+    height: max-content;
+    width: 500px;
+    border-radius: 20px;
+    padding-left: 30px;
+}
