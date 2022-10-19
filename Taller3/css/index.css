@@ -1,0 +1,61 @@
+body{
+    font-family: Century Gothic;
+    background-color: #F1ECE7;
+    margin: 0%;
+
+}
+
+#fondo{
+    margin:0%;
+    width: 100%;
+    background-color: black;
+}
+
+#fondo img{
+    opacity: 0.5;
+}
+
+header{
+    text-align: center;
+    width: 100%;
+}
+
+.text1{
+    font-family: Arial Black;
+    color: #114358;
+    text-align: center;
+}
+
+.contenedor{
+    display: flex;
+}
+
+.carro{
+    background-color: #114358;
+    color: #F1ECE7;
+    font-size: 15px;
+    margin: 3px 3px;
+    height: max-content;
+    width: 500px;
+    border-radius: 20px;
+    padding-left: 30px;
+    margin: 0 auto;
+}
+
+.dueño{
+    background-color: #114358;
+    color: #F1ECE7;
+    font-size: 15px;
+    margin: 3px 3px;
+    height: max-content;
+    width: 500px;
+    border-radius: 20px;
+    padding-left: 30px;
+    margin: 0 auto;
+}
+
+h2{
+    text-align: center;
+}
+
+
