@@ -139,26 +139,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flor Amarilla By imjosuu</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
     <style>
-        body{
-            height: 80vh;
-            display: grid;
-            place-items: center;
+       body {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-color: #16a078;
+            margin: 0;
         }
 
-        .container{
+        .containeer {
             position: relative;
-            width: 780px;
+            width: 100%;
+            max-width: 780px;
             height: 350px;
             background-color: #16a078;
-            display: grid;
-            place-items: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
         }
 
-        .flower{
+        .flower {
             width: 50px;
             height: 50px;
             animation: giro 4s linear infinite;
@@ -282,30 +288,31 @@
         }
     </style>
     <div class="container">
-        <h1>Ella sabía que él sabía, que algún día pasaría  
-            Que vendría a buscarla, con sus flores amarillas. 
-            </h1>
-            
-        <div class="flower">
-            <div class="leaf leaf-0"></div>
-            <div class="leaf leaf-1"></div>
-            <div class="leaf leaf-2"></div>
-            <div class="leaf leaf-3"></div>
-            <div class="leaf leaf-4"></div>
-            <div class="leaf leaf-5"></div>
-            <div class="leaf leaf-6"></div>
-            <div class="leaf leaf-7"></div>
-            <div class="leaf leaf-8"></div>
-            <div class="leaf leaf-9"></div>
-            <div class="leaf leaf-10"></div>
-            <div class="leaf leaf-11"></div>
-            <div class="leaf leaf-12"></div>
-            <div class="leaf leaf-13"></div>
-            <div class="leaf leaf-14"></div>
-            <div class="leaf leaf-15"></div>
-            <div class="dot"></div>
+        <div class="containeer">
+            <h1>Ella sabía que él sabía, que algún día pasaría  
+                Que vendría a buscarla, con sus flores amarillas. 
+                </h1>
+                <br><br><br><br><br><br>
+            <div class="flower">
+                <div class="leaf leaf-0"></div>
+                <div class="leaf leaf-1"></div>
+                <div class="leaf leaf-2"></div>
+                <div class="leaf leaf-3"></div>
+                <div class="leaf leaf-4"></div>
+                <div class="leaf leaf-5"></div>
+                <div class="leaf leaf-6"></div>
+                <div class="leaf leaf-7"></div>
+                <div class="leaf leaf-8"></div>
+                <div class="leaf leaf-9"></div>
+                <div class="leaf leaf-10"></div>
+                <div class="leaf leaf-11"></div>
+                <div class="leaf leaf-12"></div>
+                <div class="leaf leaf-13"></div>
+                <div class="leaf leaf-14"></div>
+                <div class="leaf leaf-15"></div>
+                <div class="dot"></div>
+            </div>
         </div>
     </div>
-    
 </body>
 </html>
