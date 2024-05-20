@@ -1,179 +1,568 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flor Morada By imjosuu</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sweet Girl | Administrador</title>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <style>
-       body {
-            height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #16a078;
-            margin: 0;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-        .containeer {
-            position: relative;
-            width: 100%;
-            max-width: 780px;
-            height: 350px;
-            background-color: #16a078;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
+body{
+    font-family: 'Poppins', sans-serif;
+}
 
-        .flower {
-            width: 50px;
-            height: 50px;
-            animation: giro 4s linear infinite;
-        }
+.hero {
+    width: 100%;
+    height: 100px;
+    min-height: 50px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: #fff;
+    z-index: 1;
+}
 
-        .leaf{
-            position: absolute;
-            z-index: 1;
-            width: 50px;
-            height: 50px;
-            background-color: #9B59B6;
-            border-radius: 2px 50px;
-            opacity: 0.8;
-            box-shadow: -5px -5px 2px rgba(0, 0, 0, 0.051);
-        }
 
-        .dot{
-            position: absolute;
-            z-index: 2;
-            width: 50px;
-            height: 50px;
-            background-color: #f1c40f;
-            border-radius: 50%;
-            animation: dot 4s ease-in-out infinite;
-        }
 
-        h1{
-            color: white;
-            font-family: Century Gothic;
-        }
+.table-container {
+    max-height: 190px; /* Ajusta la altura según sea necesario */
+    overflow-y: auto;
+    position: relative;
+    color: white;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
-        .leaf-0{
-            transform: rotate(0deg) translate(-35px, -35px) scale(2);
-        }
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    color: black;
+    z-index: 0;
+}
+tbody td {
+    color: white;
+}
 
-        .leaf-1{
-            transform: rotate(22.5deg) translate(-35px, -35px) scale(2);
-        }
+body::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../imagenes/fondo.jpg');
+    background-size: cover;
+    z-index: -1 ;
+}
 
-        .leaf-2{
-            transform: rotate(45deg) translate(-35px, -35px) scale(2);
-        }
-        .leaf-3{
-            transform: rotate(67.5deg) translate(-35px, -35px) scale(2);
-        }
-        .leaf-4{
-            transform: rotate(90deg) translate(-35px, -35px) scale(2);
-        }
-        .leaf-5{
-            transform: rotate(112.5deg) translate(-35px, -35px) scale(2);
-        }
-        .leaf-6{
-            transform: rotate(135deg) translate(-35px, -35px) scale(2);
-        }
-        .leaf-7{
-            transform: rotate(157.5deg) translate(-35px, -35px) scale(2);
-        }
-        .leaf-8{
-            transform: rotate(180deg) translate(-35px, -35px) scale(2);
-        }
-        .leaf-9{
-            transform: rotate(202.5deg) translate(-35px, -35px) scale(2);
-        }
+.hero a{
+    color: inherit;
+    z-index: 10!important;
+    text-decoration: none;
+}
 
-        .leaf-10{
-            transform: rotate(225deg) translate(-35px, -35px) scale(2);
-        }
-        .leaf-11{
-            transform: rotate(247.5deg) translate(-35px, -35px) scale(2);
-        }
-        .leaf-12{
-            transform: rotate(270deg) translate(-35px, -35px) scale(2);
-        }
-        .leaf-13{
-            transform: rotate(292.5deg) translate(-35px, -35px) scale(2);
-        }
-        .leaf-14{
-            transform: rotate(315deg) translate(-35px, -35px) scale(2);
-        }
-        .leaf-15{
-            transform: rotate(337.5deg) translate(-35px, -35px) scale(2);
-        }
 
-        @keyframes giro{
-            0%{
-                transform: scale(0) translate(-35px, -35px);
-            }
-            30%{
-                transform: scale(1) rotate(50deg);
-            }
-            70%{
-                transform: scale(1) rotate(100deg);
-            }
-            80%{
-                transform: scale(1) rotate(180deg);
-            }
-            100%{
-                transform: scale(0);
-            }
-        }
+.hero a :hover{
+    opacity: 0.5;
+}
 
-        @keyframes dot{
-            0%,12%{
-                transform: scale(0);
-            }
-            20%{
-                transform: scale(1.1);
-            }
-            25%{
-                transform: scale(0.95);
-            }
-            30%,55%{
-                transform: scale(1);
-            }
-            58%{
-                transform: scale(1.1);
-            }
-            70%,100%{
-                transform: scale(0);
-            }
-        }
+
+/* Nav */
+
+.nav {
+    --padding-container: 0;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.nav__title {
+    font-weight: 300;
+}
+
+.nav__link {
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+    z-index: 15;
+}
+
+.nav__items {
+    list-style: none;
+}
+
+.nav__links {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav__menu {
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.nav__img {
+    display: block;
+    width: 30px;
+}
+
+
+.nav__close {
+    display: var(--show, none);
+}
+
+.jumbotron {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 1000 !important;;
+}
+
+.titulo {
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 25px;
+}
+
+.price{
+    text-align: center;
+}
+
+.price__element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #B27141;
+    text-align: center;
+    border-radius: 10px;
+    width: 330px;
+    padding: 20px;
+    --color-plan: rgb(255 255 255 / 75%);
+    --color-price: #fff;
+    --bg-cta: #5B3921;
+    --color-cta: #FFF;
+    --color-items: #fff;
+    overflow: hidden; /* Asegura que el contenido adicional no se salga del contenedor */
+}
+
+.price__img-container {
+    width: 100%;
+    height: 200px; /* Ajusta la altura según sea necesario */
+    overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+}
+
+.price__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor */
+}
+
+.price__price,
+.price__cta {
+    margin-top: 10px;
+}
+
+.price__items {
+    margin-top: 10px;
+}
+
+.price__cta {
+    display: inline-block;
+    background-color: #5B3921;
+    color: white;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 20px;
+    margin-top: -35px;
+    transition: background-color 0.3s ease;
+}
+
+.price__cta:hover {
+    background-color: white;
+    color: #5B3921;
+}
+
+.price__table{
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.price__element{
+    background-color: #B27141;
+    text-align: center;
+    border-radius: 10px;
+    width: 330px;
+    padding: 40px;
+    --color-plan: rgb(255 255 255 / 75%);
+    --color-price: #fff;
+    --bg-cta: #5B3921;
+    --color-cta: #FFF;
+    --color-items: #fff;
+}
+
+.price__element--best{
+    width: 370px;
+    padding: 60px 40px;
+    background-color: #B27141;
+    --color-plan: rgb(255 255 255 / 75%);
+    --color-price: #fff;
+    --bg-cta: #5B3921;
+    --color-cta: #FFF;
+    --color-items: #fff;
+}
+
+
+.price__name{
+    color: var(--color-plan);
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.price__price{
+    font-size: 2.5rem;
+    color: var(--color-price);
+}
+
+.price__items{
+    margin-top: 10px;
+    display: grid;
+    gap: 1em;
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: var(--color-items);
+}
+
+
+.price__features {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: var(--color-items);
+    display: inline-block; /* Hacer que el contenedor se comporte como un bloque en línea */
+    white-space: normal; /* Permitir el ajuste automático del texto */
+}
+
+
+/* Media queries */
+
+@media (max-width:800px){
+
+    .nav__menu{
+        display: block;
+    }
+
+    .nav__link--menu{
+        position: fixed;
+        background-color: #000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 200;
+        opacity: 0;
+        pointer-events: none;
+        transition: .7s opacity;
+    }
+
+    .nav__link--show{
+        --show: block;
+        opacity:1 ;
+        pointer-events: unset;
+    }
+
+    .nav__close{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .hero__title{
+        font-size: 2.5rem;
+    }
+
+
+    .about__main{
+        gap: 2em;
+    }
+
+    .about__icons:last-of-type{
+        grid-column: 1/-1;
+    }
+
+
+    .knowledge__container{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr;
+        gap: 3em;
+        text-align: center;
+    }
+
+    .knowledge__picture{
+        grid-row: 1/2;
+        justify-self: center;
+    }
+
+    .testimony__container{
+        grid-template-columns: 30px 1fr 30px;
+    }
+
+    .testimony__body{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content;
+        gap: 3em;
+        justify-items:center ;
+    }
+
+
+    .testimony__img{
+        width: 200px;
+        height: 200px;
+        
+    }
+
+    .questions__copy{
+        width: 100%;
+    }
+
+    .footer__container{
+        flex-wrap: wrap;
+    }
+
+    .nav--footer{
+        width: 100%;
+        justify-items: center;
+    }
+
+    .nav__link--footer{
+        width: 100%;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+
+    .footer__form{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .footer__input{
+        flex: 1;
+    }
+
+}
+
+@media (max-width:600px){
+    .hero__title{
+        font-size: 2rem;
+    }
+
+    .hero__paragraph{
+        font-size: 1rem;
+    }
+
+    .subtitle{
+        font-size: 1.8rem;
+    }
+
+    .price__element{
+        width: 90%;
+    }
+
+    .price__element--best{
+        width: 90%;
+        /* padding: 40px; */
+    }
+
+    .price__price{
+        font-size: 2rem;
+    }
+
+    .testimony{
+        --padding-container: 60px 0;
+    }
+
+    .testimony__container{
+        grid-template-columns: 28px 1fr 28px;
+        gap: .9em;
+    }
+
+    .testimony__arrow{
+        width: 100%;
+    }
+
+    .testimony__course{
+        margin-top: 15px;
+    }
+
+    .questions__title{
+        font-size: 1rem;
+    }
+
+    .footer__title{
+        justify-self: start;
+        margin-bottom: 15px;
+    }
+
+    .nav--footer{
+        padding-bottom: 60px;
+    }
+
+    .nav__link--footer{
+        justify-content: space-between;
+    }
+
+    .footer__inputs{
+        flex-wrap: wrap;
+    }
+
+    .footer__input{
+        flex-basis: 100%;
+        margin: 0;
+        margin-bottom: 16px;
+    }
+
+    .footer__submit{
+        margin-right: auto;
+        margin-left: 0;
+        
+
+        /* 
+        margin:0;
+        width: 100%;
+        */
+    }
+}
+
     </style>
+    <header class="hero">
+        <nav class="nav container">
+            <br>
+            <div>   
+              <img src="<?php echo constant('URL') ?>public/imagenes/letraSweetGirl.png" width="145px" height="125px" style="margin-left: 60%;">
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="<?php echo constant('URL') ?>main/panelAdmin" class="nav__links">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Productos</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Iniciar Sesión</a>
+                </li>
+                <img src="<?php echo constant('URL') ?>public/imagenes/close.svg" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="<?php echo constant('URL') ?>public/imagenes/menu.svg" class="nav__img">
+            </div>
+        </nav>
+
+    </header>
+    <main>
     <div class="container">
-        <div class="containeer">
-            <div class="flower">
-                <div class="leaf leaf-0"></div>
-                <div class="leaf leaf-1"></div>
-                <div class="leaf leaf-2"></div>
-                <div class="leaf leaf-3"></div>
-                <div class="leaf leaf-4"></div>
-                <div class="leaf leaf-5"></div>
-                <div class="leaf leaf-6"></div>
-                <div class="leaf leaf-7"></div>
-                <div class="leaf leaf-8"></div>
-                <div class="leaf leaf-9"></div>
-                <div class="leaf leaf-10"></div>
-                <div class="leaf leaf-11"></div>
-                <div class="leaf leaf-12"></div>
-                <div class="leaf leaf-13"></div>
-                <div class="leaf leaf-14"></div>
-                <div class="leaf leaf-15"></div>
-                <div class="dot"></div>
+        <br><br>
+        <section class="price container">
+            <div class="">
+                <div class="jumbotron">
+                    <h1 class="text-center titulo">Gestión de Productos</h1>
+                    <hr class="my-4" style="background-color: white;">
+                    <div class="text-right">
+                        <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModalLong">Agregar producto</button>
+                    </div>
+                    <br>
+                    <div class="table-container">
+                        <table class="table table-sm">
+                        <thead>
+                            <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Vogue UK</td>
+                                <td>Perfume</td>
+                                <td>$10.50</td>
+                                <td><i class="fas fa-trash-alt icon mr-2"></i><i class="fas fa-edit icon"></i></td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+                </div>
             </div>
         </div>
     </div>
+</main>
+    <script>
+        (function(){
+    const openButton = document.querySelector('.nav__menu');
+    const menu = document.querySelector('.nav__link');
+    const closeMenu = document.querySelector('.nav__close');
+
+    openButton.addEventListener('click', ()=>{
+        menu.classList.add('nav__link--show');
+    });
+
+    closeMenu.addEventListener('click', ()=>{
+        menu.classList.remove('nav__link--show');
+    });
+
+    
+
+
+})();
+    </script>
 </body>
 </html>
