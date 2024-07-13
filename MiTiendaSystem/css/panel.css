@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #E7EEFF;
+}
+
+.navbar{
+    background-color: #15181E;
+    color: white;
+}
+
+.color {
+    background-color: #15181E;
+    color: white !important;
+}
+
+
+.navbar-toggler-icon{
+    color: white ;
+    background-color: #E7EEFF;
+}
+
+.nav{
+    font-size: 17px;
+}
+
+.linkPerfil{
+    text-decoration: none;
+    color: white;
+}
+
+.hoverColor :hover{
+    color: white;
+}
