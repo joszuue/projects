@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Mi tienda System</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="shortcut icon" href="../img/logotipo.png" type="image/x-icon" >
+    
+    <!-- Bootstrap core CSS -->
+   
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/panel.css" rel="stylesheet">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="../css/dashboard.css" rel="stylesheet">
+  </head>
+  <body>
+        
+    <header class="navbar sticky-top flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 " href="dashboard.html"><img src="../img/logoLogin.png" class="animate__animated animate__bounceInLeft" alt="Mi Tienda System" width="150px" height="40px"></a>
+      <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars fa-lg" style="color: #1864fb;"></i>
+      </button>
+      <div class="d-flex justify-content-between align-items-center w-100">
+        <h6> <span style="color: #15181E;">-</span> <a href="#" class="linkPerfil hover-text"><i class="fa-regular fa-circle-user fa-lg"></i> Josué Vásquez - VR222731</a></h6>
+        <h6 class="hoverColor"><a class="nav-link px-3 hover-text" href="#">Cerrar Sesión</a></h6>
+      </div>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row" >
+        <nav id="sidebarMenu" class="color col-md-3 col-lg-2 d-md-block sidebar collapse " >
+          <div class="position-sticky pt-3" >
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link hover-text" aria-current="page" href="dashboard.html" style="color: white;">
+                  <i class="fa-solid fa-house"></i>
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover-text" href="#" style="color: white;"> 
+                  <i class="fa-solid fa-file"></i>
+                  Pedidos
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active hover-text" href="#">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  Productos
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover-text" href="#" style="color: white;">
+                  <i class="fa-solid fa-user-group"></i>
+                  Clientes
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover-text" href="#" style="color: white;">
+                  <i class="fa-solid fa-chart-line"></i>
+                  Reportes
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover-text" href="#" style="color: white;">
+                  <i class="fa-regular fa-circle-user fa-lg"></i>
+                  Mi Perfil
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">GESTIÓN DE PRODUCTOS</h1>
+          </div>
+
+          <div class="container mt-4">
+            <h1 class="display-4 text-center" id="titulo"><b>Agregar Producto</b></h1>
+            <br>
+            <form action="login.html">
+              <div class="row g-3">
+                <div class="col-sm">
+                  <label for="nombre"><h6>Nombre:</h6></label>
+                  <input type="text" class="form-control" placeholder="Ingrese el nombre del producto" id="nombre">
+                </div>
+                <div class="col-sm-7">
+                  <label for="descripcion"><h6>Descripción:</h6></label>
+                  <input type="text" class="form-control" placeholder="Ingrese una descripción" id="descripcion">
+                </div>
+                <div class="col-sm">
+                  <label for="precio"><h6>Precio:</h6></label>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">$</span>
+                    <input type="number" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" id="precio" placeholder="0.00">
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row g-3">
+                <div class="col-sm">
+                  <label for="genero"><h6>Producto para:</h6></label>
+                  <select class="form-select" id="genero">
+                    <option value="Mujer" selected>Mujer</option>
+                    <option value="Hombre">Hombre</option>
+                    <option value="Unisex">Unisex</option>
+                  </select>
+                </div>
+                <div class="col-sm-7">
+                  <label for="input-imagen"><h6>Seleccionar imagen:</h6></label>
+                  <div class="input-group mb-3">
+                    <input type="file" class="form-control" id="input-imagen" accept="image/*">
+                  </div>
+                </div>
+                <div class="col-sm">
+                  <label for="stock"><h6>Stock:</h6></label>
+                  <input type="number" class="form-control" placeholder="Ingrese el stock" id="stock">
+                </div>
+              </div>
+              <br>
+              <div class="row g-3">
+                <div class="col-sm">
+                  <label for="categoria"><h6>Categoría:</h6></label>
+                  <select class="form-select" id="categoria">
+                    <option value="Mujer" selected>Mujer</option>
+                    <option value="Hombre">Hombre</option>
+                    <option value="Unisex">Unisex</option>
+                  </select>
+                </div>
+                <div class="col-sm">
+                  <label for="estado"><h6>Estado del producto:</h6></label>
+                  <select class="form-select" id="estado">
+                    <option value="No mostrar" selected>No mostrar</option>
+                    <option value="Mostrar">Mostrar</option>
+                  </select>
+                </div>
+                <div class="col-sm">
+                  <label for="oferta"><h6>Producto en oferta:</h6></label>
+                  <select class="form-select" id="oferta" onchange="toggleOfertaPrecio()">
+                    <option value="No" selected>No</option>
+                    <option value="Sí">Sí</option>
+                  </select>
+                </div>
+                <div class="col-sm">
+                  <label for="precioOferta"><h6>Precio de oferta:</h6></label>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">$</span>
+                    <input type="number" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" id="precioOferta" placeholder="0.00" disabled>
+                  </div>
+                </div>
+              </div>
+              <center><button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#agregarModal" id="botonProducto" onclick="mostrarValor()">Agregar Nuevo Producto</button></center>
+              <!-- Modal Productos-->
+              <div class="modal fade" id="agregarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content" >
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Confirmación de producto</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <h6>A continuación se muestra los detalles del nuevo producto:</h6><br>
+                      <h6><b>Nombre: </b> <span id="nombreEP"></span></h6>
+                      <h6><b>Descripción: </b> <span id="descri"></span></h6>
+                      <h6><b>Precio: </b> $<span id="preciop"></span></h6>
+                      <h6><b>Producto para: </b> <span id="tipo"></span></h6>
+                      <h6><b>Stock: </b> <span id="stockp"></span></h6>
+                      <h6><b>Categoria: </b> <span id="cate"></span></h6>
+                      <h6><b>Estado del producto: </b> <span id="esta"></span></h6>
+                      <h6><b>Oferta: </b> <span id="ofer"></span></h6>
+                      <h6><b>Precio de oferta: </b> $<span id="oferPre"></span></h6>
+                      <h6><b>Imagen:</b></h6>
+                      <div id="contenedor-miniatura">
+                        <img id="miniatura" class="miniatura" src="#" alt="Miniatura de imagen" width="145px" height="145px">
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                      <button type="submit" class="btn btn-primary">Aceptar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <br>
+          <hr class="my-4">
+          <h1 class="display-4 text-center"><b>Productos en Stock</b></h1> 
+          <button type="button" class="btn btn-outline-dark float-end" data-bs-toggle="modal" data-bs-target="#imagenesModal">Agregar Más Imágenes</button>
+          <br><br><br>
+          <div class="table-responsive table-container">
+          <input class="form-control mb-4" id="searchInput" type="text" placeholder="Buscar en la tabla...">
+          <table class="table table-striped table-sm text-center">
+            <thead>
+              <tr>
+                <th scope="col" style="background-color: #15181E; color: #E7EEFF;">Código</th>
+                <th scope="col" style="background-color: #15181E; color: #E7EEFF;">Categoria</th>
+                <th scope="col" style="background-color: #15181E; color: #E7EEFF;">Nombre</th>
+                <th scope="col" style="background-color: #15181E; color: #E7EEFF;">Stock</th>
+                <th scope="col" style="background-color: #15181E; color: #E7EEFF;">Opciones</th>
+              </tr>
+            </thead>
+            <tbody id="productTable">
+              <tr>
+                <td>PROD201</td>
+                <td>Casio</td>
+                <td>Reloj Metalico Aguja</td>
+                <td>50</td>
+                <td>
+                  <a href="#" class="hover-text mx-2" data-bs-toggle="modal" data-bs-target="#eliminarModal"><i class="fa-solid fa-trash fa-xl" style="color: #15181E;"></i></a>
+                  <a href="#" class="hover-text mx-2" onclick="modificarProducto('nombre', 'descripcion', 10, 'Hombre', 20, 'Unisex', 'Mostrar', 0.00)"><i class="fa-solid fa-pencil fa-xl" style="color: #15181E;"></i></a>
+                  <a href="#" class="hover-text mx-2"><i class="fa-solid fa-eye fa-xl" style="color: #15181E;"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>PROD202</td>
+                <td>Casio</td>
+                <td>Jabón</td>
+                <td>50</td>
+                <td>
+                  <a href="#" class="hover-text mx-2" data-bs-toggle="modal" data-bs-target="#eliminarModal"><i class="fa-solid fa-trash fa-xl" style="color: #15181E;"></i></a>
+                  <a href="#" class="hover-text mx-2" onclick="modificarProducto('nombre', 'descripcion', 10, 'Hombre', 20, 'Unisex', 'Mostrar', 0.00)"><i class="fa-solid fa-pencil fa-xl" style="color: #15181E;"></i></a>
+                  <a href="#" class="hover-text mx-2"><i class="fa-solid fa-eye fa-xl" style="color: #15181E;"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>PROD203</td>
+                <td>Agua</td>
+                <td>Metal</td>
+                <td>50</td>
+                <td>
+                  <a href="#" class="hover-text mx-2" data-bs-toggle="modal" data-bs-target="#eliminarModal"><i class="fa-solid fa-trash fa-xl" style="color: #15181E;"></i></a>
+                  <a href="#" class="hover-text mx-2" onclick="modificarProducto('nombre', 'descripcion', 10, 'Hombre', 20, 'Unisex', 'Mostrar', 0.00)"><i class="fa-solid fa-pencil fa-xl" style="color: #15181E;"></i></a>
+                  <a href="#" class="hover-text mx-2"><i class="fa-solid fa-eye fa-xl" style="color: #15181E;"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>PROD204</td>
+                <td>Agua</td>
+                <td>Madera</td>
+                <td>50</td>
+                <td>
+                  <a href="#" class="hover-text mx-2" data-bs-toggle="modal" data-bs-target="#eliminarModal"><i class="fa-solid fa-trash fa-xl" style="color: #15181E;"></i></a>
+                  <a href="#" class="hover-text mx-2" onclick="modificarProducto('nombre', 'descripcion', 10, 'Hombre', 20, 'Unisex', 'Mostrar', 0.00)"><i class="fa-solid fa-pencil fa-xl" style="color: #15181E;"></i></a>
+                  <a href="#" class="hover-text mx-2"><i class="fa-solid fa-eye fa-xl" style="color: #15181E;"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>PROD205</td>
+                <td>Papel</td>
+                <td>Hielo</td>
+                <td>50</td>
+                <td>
+                  <a href="#" class="hover-text mx-2" data-bs-toggle="modal" data-bs-target="#eliminarModal"><i class="fa-solid fa-trash fa-xl" style="color: #15181E;"></i></a>
+                  <a href="#" class="hover-text mx-2" onclick="modificarProducto('nombre', 'descripcion', 10, 'Hombre', 20, 'Unisex', 'Mostrar', 0.00)"><i class="fa-solid fa-pencil fa-xl" style="color: #15181E;"></i></a>
+                  <a href="#" class="hover-text mx-2"><i class="fa-solid fa-eye fa-xl" style="color: #15181E;"></i></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+        </main>
+      </div>
+    </div>
+    <!-- Modal Imagenes-->
+    <div class="modal fade" id="imagenesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content" >
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Agregar Imagenes</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+            <div class="modal-body">
+              <form action="">
+                <label for="input-imagen"><h6>Imagen 1:</h6></label>
+                <div class="input-group mb-3">
+                  <input type="file" class="form-control" id="input-imagen" accept="image/*">
+                </div>
+  
+                <label for="input-imagen"><h6>Imagen 2:</h6></label>
+                <div class="input-group mb-3">
+                  <input type="file" class="form-control" id="input-imagen" accept="image/*">
+                </div>
+                <label for="categoria"><h6>Seleccione el producto al que pertenecerán las imagenes:</h6></label>
+                <select class="form-select" id="categoria">
+                  <option value="Mujer" selected>Mujer</option>
+                  <option value="Hombre">Hombre</option>
+                  <option value="Unisex">Unisex</option>
+                </select>
+                <br>
+                <center><button type="button" class="btn btn-outline-primary">Guardar Imagenes</button></center>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary">Aceptar</button>
+            </div>
+          </div>
+      </div>
+    </div>
+    <script>
+      function toggleOfertaPrecio() {
+        const ofertaSelect = document.getElementById('oferta');
+        const precioOfertaInput = document.getElementById('precioOferta');
+        if (ofertaSelect.value === 'Sí') {
+          precioOfertaInput.disabled = false;
+        } else {
+          precioOfertaInput.disabled = true;
+          precioOfertaInput.value = '';
+        }
+      }
+
+      function mostrarMiniatura() {
+        const archivo = document.querySelector('#input-imagen').files[0];
+        const lector = new FileReader();
+
+        lector.onload = function(evento) {
+          document.querySelector('#miniatura').setAttribute('src', evento.target.result);
+        }
+
+        lector.readAsDataURL(archivo);
+      }
+
+      function modificarProducto(nombre, descripcion, precio, genero, stock, categoria, estado, precioOfer){
+        document.getElementById('titulo').innerHTML = "<b>Modificar Producto</b>";
+        document.getElementById('nombre').value = nombre;
+        document.getElementById('descripcion').value = descripcion;
+        document.getElementById('precio').value = precio;
+        document.getElementById('genero').value = genero;
+        document.getElementById('stock').value = stock;
+        document.getElementById('categoria').value = categoria;
+        document.getElementById('estado').value = estado;
+        if(precioOfer > 0.00){
+          document.getElementById('oferta').value = "Sí";
+          precioOferta.disabled = false;
+        }else{
+          document.getElementById('oferta').value = "No";
+        }
+        document.getElementById('precioOferta').value = precioOfer;
+      }
+
+      function mostrarValor() {
+        document.getElementById('nombreEP').innerText = document.getElementById('nombre').value;
+        document.getElementById('descri').innerText = document.getElementById('descripcion').value;
+        document.getElementById('preciop').innerText = document.getElementById('precio').value;
+        document.getElementById('tipo').innerText = document.getElementById('genero').value;
+        document.getElementById('stockp').innerText = document.getElementById('stock').value;
+        document.getElementById('cate').innerText = document.getElementById('categoria').value;
+        document.getElementById('esta').innerText = document.getElementById('estado').value;
+        document.getElementById('ofer').innerText = document.getElementById('oferta').value;
+        if(document.getElementById('precioOferta').value == ""){
+          document.getElementById('oferPre').innerText = "0.00";
+        }else{
+          document.getElementById('oferPre').innerText = document.getElementById('precioOferta').value;
+        }
+        
+      };
+
+      // Escuchar cambios en el input de imagen
+      document.querySelector('#input-imagen').addEventListener('change', mostrarMiniatura);
+    </script>
+    <script>
+      document.getElementById('searchInput').addEventListener('keyup', function() {
+          var input, filter, table, tr, td, i, j, txtValue;
+          input = document.getElementById('searchInput');
+          filter = input.value.toUpperCase();
+          table = document.getElementById('productTable');
+          tr = table.getElementsByTagName('tr');
+
+          for (i = 0; i < tr.length; i++) {
+              tr[i].style.display = "none";
+              td = tr[i].getElementsByTagName('td');
+              for (j = 0; j < td.length; j++) {
+                  if (td[j]) {
+                      txtValue = td[j].textContent || td[j].innerText;
+                      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                          tr[i].style.display = "";
+                          break;
+                      }
+                  }
+              }
+          }
+      });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
+  </body>
+</html>
