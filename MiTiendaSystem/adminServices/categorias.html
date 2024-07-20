@@ -135,55 +135,62 @@
           <!-- Buscador-->
           <div class="row g-7">
             <div class="col-sm">
-              <input class="form-control mb-4" id="searchInput" type="text" placeholder="Buscar en la tabla...">
+                <input class="form-control mb-4" id="searchInput" type="text" placeholder="Buscar en la tabla...">
             </div>
-          </div>
+            <div class="col-sm-3">
+                <select class="form-select" id="filterSelect">
+                    <option value="">Todas las categorías</option>
+                    <option value="mayor">Tienen productos asociados</option>
+                    <option value="igual">No tienen productos asociados</option>
+                </select>
+            </div>
+        </div>
 
           <!-- Tabla de Productos -->
           <div class="table-responsive table-container">
-          <table class="table table-striped table-sm text-center">
-            <thead>
-              <tr>
-                <th scope="col" style="background-color: #15181E; color: #E7EEFF;">Código</th>
-                <th scope="col" style="background-color: #15181E; color: #E7EEFF;">Nombre</th>
-                <th scope="col" style="background-color: #15181E; color: #E7EEFF;">Descripción</th>
-                <th scope="col" style="background-color: #15181E; color: #E7EEFF;">Total de productos</th>
-                <th scope="col" style="background-color: #15181E; color: #E7EEFF;">Opciones</th>
-              </tr>
-            </thead>
-            <tbody id="cateTable">
-              <tr>
-                <td>CATE201</td>
-                <td>Casio</td>
-                <td>Descripción para la categoria de Casio</td>
-                <td>2</td>
-                <td>
-                  <a href="#" class="hover-text mx-2" data-bs-toggle="modal" data-bs-target="#eliminarModal"><i class="fa-solid fa-trash fa-xl" style="color: #15181E;"></i></a>
-                  <a href="#" class="hover-text mx-2" onclick="modificarCategoria('nombre', 'descripcion')"><i class="fa-solid fa-pencil fa-xl" style="color: #15181E;"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td>CATE202</td>
-                <td>Agua</td>
-                <td>Descripción para la categoria de Agua</td>
-                <td>5</td>
-                <td>
-                  <a href="#" class="hover-text mx-2" data-bs-toggle="modal" data-bs-target="#eliminarModal"><i class="fa-solid fa-trash fa-xl" style="color: #15181E;"></i></a>
-                  <a href="#" class="hover-text mx-2" onclick="modificarCategoria('nombre', 'descripcion')"><i class="fa-solid fa-pencil fa-xl" style="color: #15181E;"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td>CATE203</td>
-                <td>Papel</td>
-                <td>Descripción para la categoria de Papel</td>
-                <td>10</td>
-                <td>
-                  <a href="#" class="hover-text mx-2" data-bs-toggle="modal" data-bs-target="#eliminarModal"><i class="fa-solid fa-trash fa-xl" style="color: #15181E;"></i></a>
-                  <a href="#" class="hover-text mx-2" onclick="modificarCategoria('nombre', 'descripcion')"><i class="fa-solid fa-pencil fa-xl" style="color: #15181E;"></i></a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            <table class="table table-striped table-sm text-center">
+              <thead>
+                <tr>
+                  <th scope="col" style="background-color: #15181E; color: #E7EEFF;">Código</th>
+                  <th scope="col" style="background-color: #15181E; color: #E7EEFF;">Nombre</th>
+                  <th scope="col" style="background-color: #15181E; color: #E7EEFF;">Descripción</th>
+                  <th scope="col" style="background-color: #15181E; color: #E7EEFF;">Total de productos</th>
+                  <th scope="col" style="background-color: #15181E; color: #E7EEFF;">Opciones</th>
+                </tr>
+              </thead>
+              <tbody id="cateTable">
+                <tr>
+                  <td>CATE201</td>
+                  <td>Casio</td>
+                  <td>Descripción para la categoría de Casio</td>
+                  <td>2</td>
+                  <td>
+                    <a href="#" class="hover-text mx-2" data-bs-toggle="modal" data-bs-target="#eliminarModal"><i class="fa-solid fa-trash fa-xl" style="color: #15181E;"></i></a>
+                    <a href="#" class="hover-text mx-2" onclick="modificarCategoria('nombre', 'descripcion')"><i class="fa-solid fa-pencil fa-xl" style="color: #15181E;"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>CATE202</td>
+                  <td>Agua</td>
+                  <td>Descripción para la categoría de Agua</td>
+                  <td>5</td>
+                  <td>
+                    <a href="#" class="hover-text mx-2" data-bs-toggle="modal" data-bs-target="#eliminarModal"><i class="fa-solid fa-trash fa-xl" style="color: #15181E;"></i></a>
+                    <a href="#" class="hover-text mx-2" onclick="modificarCategoria('nombre', 'descripcion')"><i class="fa-solid fa-pencil fa-xl" style="color: #15181E;"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>CATE203</td>
+                  <td>Papel</td>
+                  <td>Descripción para la categoría de Papel</td>
+                  <td>0</td>
+                  <td>
+                    <a href="#" class="hover-text mx-2" data-bs-toggle="modal" data-bs-target="#eliminarModal"><i class="fa-solid fa-trash fa-xl" style="color: #15181E;"></i></a>
+                    <a href="#" class="hover-text mx-2" onclick="modificarCategoria('nombre', 'descripcion')"><i class="fa-solid fa-pencil fa-xl" style="color: #15181E;"></i></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </main>
       </div>
