@@ -25,6 +25,36 @@ function toggleOfertaPrecio() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+  const searchInput = document.getElementById('searchInput');
+  const filterSelect = document.getElementById('filterSelect');
+  const products = document.querySelectorAll('.col[data-cate]');
+
+  searchInput.addEventListener('input', filterProducts);
+  filterSelect.addEventListener('change', filterProducts);
+
+  function filterProducts() {
+    const searchText = searchInput.value.toLowerCase();
+    const filterValue = filterSelect.value;
+
+    products.forEach(product => {
+      const name = product.getAttribute('data-name').toLowerCase();
+      const category = product.getAttribute('data-cate').toLowerCase();
+      const status = product.getAttribute('data-status').toLowerCase();
+      const code = product.getAttribute('data-cod').toLowerCase();
+
+      const matchesSearch = name.includes(searchText) || category.includes(searchText) || status.includes(searchText) || code.includes(searchText);
+      const matchesFilter = !filterValue || category === filterValue.toLowerCase() || status === filterValue.toLowerCase();
+
+      if (matchesSearch && matchesFilter) {
+        product.style.display = '';
+      } else {
+        product.style.display = 'none';
+      }
+    });
+  }
+});
+
 //Envia todos los datos al formulario para modificar
 function modificarProducto(nombre, descripcion, precio, genero, stock, categoria, estado, precioOfer){
     document.getElementById('titulo').innerHTML = "<b>Modificar Producto</b>";
