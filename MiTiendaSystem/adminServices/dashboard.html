@@ -7,7 +7,6 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
     <title>Mi tienda System</title>
-    <script src="https://www.gstatic.com/charts/loader.js"></script>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -120,61 +119,131 @@
               </button>
             </div>
           </div>
-          <table class="columns">
-            <tr>
-              <td><div id="piechart_div"></div></td>
-              <td><div id="barchart_div"></div></td>
-            </tr>
-            <tr>
-              <td><div id="barchart2_div"></div></td>
-              <td><div id="piechart2_div"></div></td>  
-            </tr>
-          </table>
+          <div class="row g-7 d-flex justify-content-center align-items-center">
+            <div class="col-sm-5 mb-3">
+              <canvas id="myChart"></canvas>
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3 mb-3">
+              <canvas id="myChart2"></canvas>
+            </div>
+          </div>
+          <div class="row g-7 d-flex justify-content-center align-items-center">
+            <div class="col-sm-3 mb-3">
+              <canvas id="myChart3"></canvas>
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-5 mb-3">
+              <canvas id="myChart4"></canvas>
+            </div>
+          </div>
         </main>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-      // Load Charts and the corechart and barchart packages.
-      google.charts.load('current', {'packages':['corechart']});
-
-      // Draw the pie chart and bar chart when Charts is loaded.
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-
-        var data = new google.visualization.DataTable();
-        //GRAFICA 1
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
-        data.addRows([
-          ['Enero', 3],
-          ['Febrero', 1],
-          ['Marzo', 1],
-          ['Abril', 1],
-          ['Mayo', 2]
-        ]);
-
-        var piechart_options = {title:'Ganancias Mensuales',
-                      width:600,
-                      backgroundColor: '#e9ecef',
-                      height:500};
-        var piechart = new google.visualization.PieChart(document.getElementById('piechart_div'));
-        var piechart2 = new google.visualization.PieChart(document.getElementById('piechart2_div'));
-        piechart.draw(data, piechart_options);
-        piechart2.draw(data, piechart_options);
-        var barchart_options = {title:'Ganancias',
-                      width:600,
-                      backgroundColor: '#e9ecef',
-                      height:500,
-                      legend: 'none'};
-        var barchart = new google.visualization.BarChart(document.getElementById('barchart_div'));
-        var barchart2 = new google.visualization.BarChart(document.getElementById('barchart2_div'));
-        barchart.draw(data, barchart_options);
-        barchart2.draw(data, barchart_options);
-
-      }
+      const ctx = document.getElementById('myChart');
+    
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
     </script>
+    <script>
+      const ctx2 = document.getElementById('myChart2');
+      new Chart(ctx2, {
+        type: 'doughnut',
+        data: {
+          labels: [
+            'Red',
+            'Blue',
+            'Yellow'
+          ],
+          datasets: [{
+            label: 'My First Dataset',
+            data: [300, 50, 100],
+            backgroundColor: [
+              'rgb(255, 99, 132)',
+              'rgb(54, 162, 235)',
+              'rgb(255, 205, 86)'
+            ],
+            hoverOffset: 4
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    </script>
+    <script>
+      const ctx3 = document.getElementById('myChart3');
+      new Chart(ctx3, {
+        type: 'doughnut',
+        data: {
+          labels: [
+            'Red',
+            'Blue',
+            'Yellow'
+          ],
+          datasets: [{
+            label: 'My First Dataset',
+            data: [300, 50, 100],
+            backgroundColor: [
+              'rgb(255, 99, 132)',
+              'rgb(54, 162, 235)',
+              'rgb(255, 205, 86)'
+            ],
+            hoverOffset: 4
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
 
+    const ctx4 = document.getElementById('myChart4');
+    
+    new Chart(ctx4, {
+      type: 'bar',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 3, 5, 2, 3],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+    </script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
   </body>
