@@ -5,7 +5,7 @@ body {
 
 
 header {
-    height: 400px;
+    height: 420px;
     position: relative;
     background: url('imagen.jpg') center center/cover no-repeat;
     color: white;
@@ -15,6 +15,10 @@ header {
 .transparent-navbar {
     background-color: transparent !important; /* Elimina cualquier color de fondo */
     box-shadow: none; /* Opcional: quita sombras si las hubiera */
+}
+a {
+    color: inherit; /* o puedes usar 'color: black;' para un color específico */
+    text-decoration: none;
 }
 
 
