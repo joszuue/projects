@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
+        }
+        .navbar {
+            background-color: #101216 !important;
+        }
+        .card {
+            max-width: 700px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/logoNegativo.png" alt="Logo" width="160" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Agregar Productos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Mi Tienda</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="mb-4 text-center">Productos Disponibles</h1>
+        <div id="productsList" class="row"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let products = JSON.parse(sessionStorage.getItem('products')) || [];
+            let productsList = document.getElementById('productsList');
+
+            products.forEach(product => {
+                
+                  
+                let productCard = `
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="${product.image}" class="card-img-top" alt="${product.name}" width="500px" height="500px">
+                            <div class="card-body">
+                                <h5 class="card-title">${product.name}</h5>
+                                <p class="card-text">${product.description}</p>
+                                <p><strong>Precio:</strong> $${product.price}</p>
+                                <p><strong>Stock:</strong> ${product.stock}</p>
+                            </div>
+                        </div>
+                    </div>`;
+                productsList.innerHTML += productCard;  
+                
+            });
+        });
+    </script>
+</body>
+</html>

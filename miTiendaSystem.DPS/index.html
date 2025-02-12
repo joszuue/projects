@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Producto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
+        }
+        .navbar {
+            background-color: #101216 !important;
+        }
+        .card {
+            max-width: 700px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/logoNegativo.png" alt="Logo" width="160" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Agregar Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="miTienda.html">Mi Tienda</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container mt-5">
+        <div class="card shadow-lg p-3">
+            <h1 class="mb-4 text-center">Agregar Producto</h1>
+            <form id="productForm">
+                <div class="mb-3">
+                    <label class="form-label">Imagen del Producto</label>
+                    <input type="file" class="form-control" id="image" accept="image/*" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" placeholder="Ingrese el nombre del producto" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Descripción</label>
+                    <textarea class="form-control" id="description" rows="3" placeholder="Describa el producto" required></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Precio ($)</label>
+                        <input type="number" class="form-control" id="price" placeholder="Ingrese el precio" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Stock</label>
+                        <input type="number" class="form-control" id="stock" placeholder="Cantidad disponible" required>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary w-35">Guardar Producto</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br><br>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('productForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let file = document.getElementById('image').files[0];
+
+            if (file) {
+                let reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = function() {
+                    let product = {
+                        image: reader.result,  // Guardamos la imagen en Base64
+                        name: document.getElementById('name').value,
+                        description: document.getElementById('description').value,
+                        price: document.getElementById('price').value,
+                        stock: document.getElementById('stock').value
+                    };
+
+                    let products = JSON.parse(sessionStorage.getItem('products')) || [];
+                    products.push(product);
+                    sessionStorage.setItem('products', JSON.stringify(products));
+                    document.getElementById('productForm').reset();
+                };
+            }
+        });
+    </script>
+</body>
+</html>
