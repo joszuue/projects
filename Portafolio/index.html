@@ -1,163 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio | Josué Vásquez</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portafolio profesional de Denis Josué Vásquez Rodríguez, Analista Programador en El Salvador.">
+  <title>Josué Vásquez | Analista Programador</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<style>
-    a {
-    color: black; /* o puedes usar 'color: black;' para un color específico */
-    text-decoration: none;
-}
-</style>
-<!-- Header -->
-<header class="text-center bg-dark py-5">
-    <div class="container">
-        <h1 class="display-4">Hola, soy Josué Vásquez!</h1>
-        <!-- Foto de perfil -->
-        <img src="b1cf_Denis Josué Vásquez Rodríguez.jpg" alt="Foto de Josué Vásquez" class="profile-pic my-3">
-        <p class="lead">Desarrollador Web | Técnico en Ingeniería en Computación</p>
-        <a href="#contact" class="btn btn-primary">Contactos</a>
+  <nav class="navbar" aria-label="Navegación principal">
+    <div class="container nav-content">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio"><span>JV</span> Josué Vásquez</a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false"><i class="bi bi-list"></i></button>
+      <div class="nav-links">
+        <a href="#sobre-mi">Sobre mí</a><a href="#experiencia">Experiencia</a><a href="#proyectos">Proyectos</a><a href="#contacto">Contacto</a>
+      </div>
     </div>
-</header>
+  </nav>
 
-
-<!-- About Section -->
-<section id="about" class="py-5">
-    <div class="container">
-        <h2 class="text-center">Sobre Mí</h2>
-        <p class="text-center">Soy Técnico en Ingeniería en Computación con experiencia en
-            desarrollo de software y gestión de sistemas. Manejo Java y
-            PHP, tengo conocimientos en bases de datos y un nivel
-            intermedio-alto de inglés. Me gusta colaborar en equipo y
-            aprender en el ámbito tecnológico.</p>
-        <div class="row">
-            <div class="col-md-4">
-                <h3>Habilidades</h3>
-                <ul>
-                    <li>Programación: PHP (MVC), Java web (JSF)</li>
-                    <li>Bases de datos: MySQL(PHPMyAdmin), SQL server</li>
-                    <li>Desarrollo web: HTML, CSS, JavaScript</li>
-                    <li>Herramientas y software: PHPMyAdmin, Visual StudioCode, IntelliJ IDEA</li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h3>Experiencia</h3>
-                <h6><b>Registro Nacional de las Personas Naturales</b></h6>
-                <h7>Unidad de Talento Humano y Unidad de Desarrollo y Mantenimiento de Sistemas</h7>
-                <ul>
-                    <li>Lideré el desarrollo y la implementación de un sistema de gestión de clima organizacional utilizando JSF, Java, y otras tecnologías web.</li>
-                    <br>
-                    <li>Habilité la descarga de informes detallados en formatoExcel, lo que facilitó la revisión y el análisis profundode los resultados de las encuestas.</li>
-                    <br>
-                    <li>Implementé características de análisis de datos quepermitieron la generación automática de gráficosinteractivos para visualizar tendencias en el climaorganizacional.</li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h3>Educación</h3>
-                <ul>
-                    <li>
-                        <b>Ingeniería en ciencias de la computación.</b><br>Universidad Don Bosco <br> 2024-Actualidad   
-                    </li>
-                    <br>
-                    <li>
-                        <b>Técnico en Ingeniería en Computación (PILET)</b><br>Universidad Don Bosco <br> 2022-2023
-                    </li>
-                    <br>
-                    <li>
-                        <b>Bachillerato Técnico Vocacional en Desarrollo de Software (PILET)</b><br>Colegio Don Bosco <br> 2020-2022
-                    </li>
-                </ul>
-            </div>
+  <main>
+    <header class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow"><i class="bi bi-code-slash"></i> Analista Programador</span>
+          <h1>Convierto necesidades complejas en <span>soluciones digitales útiles.</span></h1>
+          <p>Técnico e ingeniero en formación en Ciencias de la Computación. Desarrollo sistemas institucionales, optimizo procesos y coordino proyectos tecnológicos desde la idea hasta su implementación.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#proyectos">Ver proyectos <i class="bi bi-arrow-right"></i></a>
+            <a class="btn btn-secondary" href="mailto:josuue.vasquezz@gmail.com">Contactarme</a>
+          </div>
+          <div class="hero-meta">
+            <span><i class="bi bi-geo-alt"></i> San Salvador, El Salvador</span>
+            <span><i class="bi bi-briefcase"></i> Disponible para colaborar</span>
+          </div>
         </div>
-    </div>
-</section>
-
-<!-- Projects Section -->
-<section id="projects" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center">Proyectos</h2>
-        <div class="row">
-            <a href="https://github.com/joszuue/Mi_Tienda_System" target="_blank" class="col-md-4">
-                <div>
-                    <div class="card mb-4">
-                        <img src="miTienda.png" class="card-img-top" alt="Proyecto 1" height="350px">
-                        <div class="card-body">
-                            <h5 class="card-title">Mi Tienda System</h5>
-                            <p class="card-text">Mi Tienda System" es una plataforma de comercio electrónico desarrollada en PHP con el patrón de arquitectura MVC. Permite gestionar productos y ventas en línea: añadir, editar, eliminar productos, controlar inventario, categorizar y procesar pagos. Ideal para centralizar operaciones y mejorar la experiencia del cliente.</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="https://github.com/joszuue/elegant" target="_blank" class="col-md-4">
-                <div>
-                    <div class="card mb-4">
-                        <img src="logo.png" class="card-img-top" alt="Proyecto 1" height="350px">
-                        <div class="card-body">
-                            <h5 class="card-title">ELEGANT</h5>
-                            <p class="card-text">Elegant es una tienda en línea desarrollada en PHP con arquitectura MVC, que permite a los usuarios registrarse, explorar productos y agregar artículos a su carrito de compras de manera sencilla y eficiente para una experiencia de compra completa.</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="#" class="col-md-4" >
-                <div >
-                    <div class="card mb-4">
-                        <img src="ecoSystem.png" class="card-img-top" alt="Proyecto 2"  height="350px">
-                        <div class="card-body">
-                            <h5 class="card-title">EcoSystem</h5>
-                            <p class="card-text">Sistema de encuestas dinámicas creadas a partir de un estándar de calificación que toma en cuenta las diversas percepciones que el trabajador tiene de las estructuras y procesos en un medio laboral, refiriéndose al ambiente de trabajo de la organización. Fue desarrollado con Java y los frameworks JSF y PrimeFaces.</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://github.com/joszuue/Veterinaria" target="_blank" class="col-md-4">
-                <div >
-                    <div class="card mb-4">
-                        <img src="Veterinaria.png" class="card-img-top" alt="Proyecto 3" height="350px">
-                        <div class="card-body">
-                            <h5 class="card-title">Veterinaria</h5>
-                            <p class="card-text">El proyecto "Veterinaria" es una aplicación web diseñada para la gestión de una clínica veterinaria, implementada como un sistema CRUD (Create, Read, Update, Delete) desarrollado con PHP, Laravel y Filament. Este proyecto permite administrar de manera eficiente datos relacionados con pacientes, dueños, citas y tratamientos.</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="https://github.com/joszuue/Gestion_Personas" target="_blank" class="col-md-4">
-                <div >
-                    <div class="card mb-4">
-                        <img src="personas.png" class="card-img-top" alt="Proyecto 3" height="350px">
-                        <div class="card-body">
-                            <h5 class="card-title">Sistema de Gestión de Personas</h5>
-                            <p class="card-text">Proyecto CRUD de Gestión de Personas es una aplicación web desarrollada en PHP con el patrón de arquitectura MVC. Permite gestionar datos personales y realizar operaciones de Crear, Leer, Actualizar y Eliminar registros de manera eficiente.</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
+        <div class="portrait-wrap reveal">
+          <div class="portrait-card">
+            <img src="b1cf_Denis Josué Vásquez Rodríguez.jpg" alt="Retrato profesional de Josué Vásquez">
+            <div class="portrait-caption"><strong>Denis Josué Vásquez</strong><span>PHP · Laravel · JavaScript · MySQL</span></div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </header>
 
-<!-- Contact Section -->
-<section id="contact" class="py-5">
-    <div class="container">
-        <h2 class="text-center">Contactos</h2>
-        <p class="text-center"><b>Correo:</b> imjosuu@gmail.com </p>
-        <p class="text-center"><b>Teléfono</b> 7474-7002</p>
-    </div>
-</section>
+    <section class="section" id="sobre-mi">
+      <div class="container about-grid">
+        <div class="section-heading reveal">
+          <span class="section-number">01</span><p class="kicker">Perfil profesional</p>
+          <h2>Tecnología con propósito, liderazgo y mejora continua.</h2>
+        </div>
+        <div class="about-copy reveal">
+          <p>Cuento con experiencia en desarrollo de software, liderazgo técnico y coordinación de proyectos. Me especializo en traducir requerimientos de negocio en soluciones robustas, automatizar procesos y facilitar la comunicación entre equipos técnicos y usuarios.</p>
+          <p>He participado en proyectos institucionales y en iniciativas de alcance regional vinculadas a competencias tecnológicas como FIRST Global Challenge y FTC.</p>
+          <div class="skill-cloud" aria-label="Tecnologías principales">
+            <span>PHP 7.x–8.3</span><span>Laravel</span><span>MVC</span><span>JavaScript</span><span>jQuery</span><span>AJAX</span><span>Java / JSF</span><span>MySQL</span><span>SQL Server</span><span>Git</span><span>cPanel</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- Footer -->
-<footer class="bg-dark text-white text-center py-3">
-    <p>Denis Josué Vásquez Rodríguez</p>
-</footer>
+    <section class="section section-soft" id="experiencia">
+      <div class="container">
+        <div class="section-heading centered reveal"><span class="section-number">02</span><p class="kicker">Trayectoria</p><h2>Experiencia profesional</h2></div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-date">Dic. 2024 — Actualidad</div>
+            <div class="timeline-card"><span class="role">Programador Jr.</span><h3>Fundación Salvador del Mundo (FUSALMO)</h3><ul><li>Coordinación y seguimiento del equipo técnico, onboarding de pasantes y cumplimiento de POA y OKRs.</li><li>Desarrollo de módulos institucionales con PHP MVC y MySQL para automatizar solicitudes y procesos internos.</li><li>Diseño de un sistema integral para competencias de robótica, con usuarios, evaluaciones y resultados centralizados.</li><li>Soporte y coordinación técnica regional para FTC y adopción de buenas prácticas de FIRST Global Challenge.</li></ul></div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-date">Jun. — Sep. 2023</div>
+            <div class="timeline-card"><span class="role">Prácticas profesionales</span><h3>Registro Nacional de las Personas Naturales</h3><ul><li>Desarrollo de un sistema de clima organizacional con Java Web, JSF y tecnologías institucionales.</li><li>Automatización de reportería en Excel para facilitar el análisis de los resultados.</li></ul></div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <section class="section" id="proyectos">
+      <div class="container">
+        <div class="section-heading centered reveal"><span class="section-number">03</span><p class="kicker">Trabajo seleccionado</p><h2>Proyectos destacados</h2></div>
+        <div class="project-grid">
+          <article class="project-card reveal"><div class="project-image"><img src="miTienda.png" alt="Vista de Mi Tienda System"></div><div class="project-body"><div class="project-top"><span>PHP · MVC</span><a href="https://github.com/joszuue/Mi_Tienda_System" target="_blank" rel="noopener" aria-label="Ver Mi Tienda System en GitHub"><i class="bi bi-arrow-up-right"></i></a></div><h3>Mi Tienda System</h3><p>Plataforma de comercio electrónico para administrar productos, inventario, categorías, ventas y pagos desde un mismo lugar.</p></div></article>
+          <article class="project-card reveal"><div class="project-image"><img src="logo.png" alt="Logotipo de Elegant"></div><div class="project-body"><div class="project-top"><span>PHP · E-commerce</span><a href="https://github.com/joszuue/elegant" target="_blank" rel="noopener" aria-label="Ver Elegant en GitHub"><i class="bi bi-arrow-up-right"></i></a></div><h3>Elegant</h3><p>Tienda en línea con registro de usuarios, catálogo y carrito de compras, construida con arquitectura MVC.</p></div></article>
+          <article class="project-card reveal"><div class="project-image"><img src="ecoSystem.png" alt="Vista de EcoSystem"></div><div class="project-body"><div class="project-top"><span>Java · JSF · PrimeFaces</span></div><h3>EcoSystem</h3><p>Sistema de encuestas dinámicas para medir el clima organizacional y visualizar tendencias mediante reportes y gráficos.</p></div></article>
+          <article class="project-card reveal"><div class="project-image"><img src="Veterinaria.png" alt="Vista del sistema Veterinaria"></div><div class="project-body"><div class="project-top"><span>Laravel · Filament</span><a href="https://github.com/joszuue/Veterinaria" target="_blank" rel="noopener" aria-label="Ver Veterinaria en GitHub"><i class="bi bi-arrow-up-right"></i></a></div><h3>Veterinaria</h3><p>Aplicación para gestionar pacientes, propietarios, citas y tratamientos de una clínica veterinaria.</p></div></article>
+          <article class="project-card reveal"><div class="project-image"><img src="personas.png" alt="Vista del Sistema de Gestión de Personas"></div><div class="project-body"><div class="project-top"><span>PHP · MySQL · MVC</span><a href="https://github.com/joszuue/Gestion_Personas" target="_blank" rel="noopener" aria-label="Ver Gestión de Personas en GitHub"><i class="bi bi-arrow-up-right"></i></a></div><h3>Gestión de Personas</h3><p>Aplicación CRUD para registrar, consultar, actualizar y administrar información personal de forma eficiente.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section education section-soft">
+      <div class="container">
+        <div class="section-heading reveal"><span class="section-number">04</span><p class="kicker">Formación</p><h2>Educación y capacidades</h2></div>
+        <div class="education-grid reveal">
+          <div><span>2024 — Actualidad</span><h3>Ingeniería en Ciencias de la Computación</h3><p>Universidad Don Bosco</p></div>
+          <div><span>2022 — 2023</span><h3>Técnico en Ingeniería en Computación (PILET)</h3><p>Universidad Don Bosco</p></div>
+          <div><span>2020 — 2022</span><h3>Bachillerato Técnico Vocacional en Desarrollo de Software</h3><p>Colegio Don Bosco</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contacto">
+      <div class="container contact-card reveal"><p class="kicker">Hablemos</p><h2>¿Tienes un proyecto o una oportunidad?</h2><p>Estoy abierto a conversar sobre desarrollo de software, optimización de procesos y proyectos tecnológicos.</p><div class="contact-actions"><a class="btn btn-light" href="mailto:josuue.vasquezz@gmail.com"><i class="bi bi-envelope"></i> Escribir por correo</a><a class="btn btn-outline-light" href="tel:+50374747002"><i class="bi bi-telephone"></i> +503 7474-7002</a></div></div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-content"><p>© <span id="year"></span> Denis Josué Vásquez Rodríguez</p><div><a href="https://github.com/joszuue" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a><a href="mailto:josuue.vasquezz@gmail.com" aria-label="Correo"><i class="bi bi-envelope"></i></a></div></div></footer>
+  <script src="script.js"></script>
 </body>
 </html>
-
