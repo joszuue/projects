@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollador Software | Portafolio Light Minimalista</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Archivos CSS y JS Externos -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body class="antialiased selection:bg-light-slate selection:text-white">
+
+    <header
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-md bg-light-bg/85 border-b border-light-border">
+        <!-- Indicador de Progreso de Lectura -->
+        <div id="readingProgress" class="fixed top-0 left-0 h-[2.5px] bg-light-slate z-[60] transition-all duration-150 ease-out w-0"></div>
+
+        <div class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#inicio" class="hover:opacity-80 transition-opacity flex items-center">
+                <img src="assets/jv_negro.png" alt="Josué Vásquez" class="h-18 sm:h-20 w-auto object-contain">
+            </a>
+
+            <!-- Navegación Escritorio -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#inicio" class="nav-link text-light-textMuted hover:text-light-textDark transition-colors">Inicio</a>
+                <a href="#proyectos"
+                    class="nav-link text-light-textMuted hover:text-light-textDark transition-colors">Proyectos</a>
+                <a href="#experiencia"
+                    class="nav-link text-light-textMuted hover:text-light-textDark transition-colors">Experiencia</a>
+                <a href="#habilidades"
+                    class="nav-link text-light-textMuted hover:text-light-textDark transition-colors">Educación</a>
+                <a href="#contacto"
+                    class="nav-link px-4 py-2 rounded-full border border-light-slate text-light-textDark hover:bg-light-slate hover:text-white transition-all shadow-sm">Contacto</a>
+            </nav>
+
+            <!-- Botón Menú Móvil -->
+            <button id="menuBtn" class="md:hidden text-light-textDark focus:outline-none" aria-label="Abrir menú">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Menú Desplegable Móvil -->
+        <div id="mobileMenu"
+            class="hidden md:hidden bg-light-surface border-b border-light-border px-6 py-6 flex-col gap-4 text-center shadow-lg">
+            <a href="#inicio"
+                class="mobile-link text-light-textMuted hover:text-light-textDark py-2 font-medium">Inicio</a>
+            <a href="#proyectos"
+                class="mobile-link text-light-textMuted hover:text-light-textDark py-2 font-medium">Proyectos</a>
+            <a href="#experiencia"
+                class="mobile-link text-light-textMuted hover:text-light-textDark py-2 font-medium">Experiencia</a>
+            <a href="#habilidades"
+                class="mobile-link text-light-textMuted hover:text-light-textDark py-2 font-medium">Educación</a>
+            <a href="#contacto"
+                class="mobile-link px-4 py-2 mt-2 rounded-full bg-light-slate text-white font-medium inline-block">Contacto</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <section id="inicio" class="hero-section">
+            <div class="hero-layout">
+
+                <!-- Contenido -->
+                <div class="hero-copy">
+                    <p class="reveal-element hero-eyebrow">
+                        Desarrollo · Soluciones · Impacto
+                    </p>
+
+                    <h1 class="reveal-element delay-1 hero-name">
+                        Josué Vásquez
+                    </h1>
+
+                    <div class="reveal-element delay-1 hero-role">
+                        <span>Desarrollador de Software</span>
+                        <span>Full-Stack · Co-Fundador</span>
+                        <span>en KeeyCode</span>
+                    </div>
+
+                    <p class="reveal-element delay-2 hero-description">
+                        Diseño y desarrollo soluciones digitales orientadas a optimizar
+                        procesos, integrando arquitectura web, automatización y
+                        coordinación técnica desde la planificación hasta el despliegue.
+                    </p>
+
+                    <div class="reveal-element delay-3 hero-actions">
+                        <a href="#proyectos" class="hero-button primary-button">
+                            Ver proyectos
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+
+                        <a href="#experiencia" class="hero-button secondary-button">
+                            Ver trayectoria
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Composición de la fotografía -->
+                <div class="reveal-element delay-2 hero-portrait" aria-label="Retrato de Josué Vásquez">
+                    <div class="portrait-grid"></div>
+                    <div class="portrait-circle"></div>
+                    <div class="portrait-block"></div>
+
+                    <span class="tech-cross cross-one"></span>
+                    <span class="tech-cross cross-two"></span>
+
+                    <img src="josuevasquez.webp" alt="Josué Vásquez, desarrollador de software" class="portrait-image">
+
+                    <div class="code-note">
+                        <i data-lucide="code-2"></i>
+                        <span>ideas → desarrollo → impacto</span>
+                    </div>
+
+                    <p class="portrait-keywords">
+                        Código<br>
+                        Estrategia<br>
+                        Personas<br>
+                        Resultados
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="proyectos" class="py-24 px-6 border-t border-light-border bg-light-bg">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 reveal-element">
+                    <div>
+                        <span class="text-xs font-mono uppercase tracking-widest text-light-textMuted block mb-2">01.
+                            Trabajo seleccionado</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-light-textDark tracking-tight">Proyectos
+                            destacados</h2>
+                    </div>
+                    <p class="text-light-textMuted text-sm max-w-sm mt-4 md:mt-0">
+                        Selección de desarrollos y sistemas diseñados para resolver necesidades institucionales y
+                        técnicas.
+                    </p>
+                </div>
+
+                <!-- Proyecto Principal Destacado (01. STEAM Maker Challenge Live Scoring System) -->
+                <article
+                    class="reveal-element bg-light-surface rounded-2xl border border-light-border overflow-hidden p-6 sm:p-8 card-hover shadow-sm mb-12 group">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+                        <!-- Imagen Grande en Escritorio / Arriba en Móvil -->
+                        <div
+                            class="lg:col-span-7 bg-white rounded-xl border border-light-border p-4 flex items-center justify-center overflow-hidden min-h-[260px] sm:min-h-[340px]">
+                            <img src="assets/steam_maker_challenge.png" alt="STEAM Maker Challenge Live Scoring System"
+                                class="max-h-[320px] sm:max-h-[380px] w-auto max-w-full object-contain group-hover:scale-[1.03] transition-transform duration-300">
+                        </div>
+
+                        <!-- Información del Proyecto -->
+                        <div class="lg:col-span-5 flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex items-center justify-between gap-3 mb-4">
+                                    <span
+                                        class="font-mono text-xs font-semibold px-3 py-1 rounded-full bg-light-subtle text-light-slate border border-light-border">Proyecto
+                                        destacado</span>
+                                    <span
+                                        class="font-mono text-2xl font-bold text-light-border group-hover:text-light-textMuted transition-colors select-none">01</span>
+                                </div>
+
+                                <h3
+                                    class="text-2xl sm:text-3xl font-bold text-light-textDark mb-3 group-hover:text-light-slate transition-colors">
+                                    STEAM Maker Challenge Live Scoring System
+                                </h3>
+
+                                <p class="text-light-textMuted text-sm leading-relaxed mb-5">
+                                    Sistema de puntuación en tiempo real desarrollado para administrar competencias del
+                                    STEAM Maker Challenge. Permite registrar equipos, gestionar enfrentamientos,
+                                    controlar puntuaciones y mostrar resultados actualizados durante el desarrollo del
+                                    evento.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </article>
+
+                <!-- Cuadrícula de Proyectos Complementarios (02, 03, 04) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+
+                    <!-- Proyecto 02: FORMA -->
+                    <article
+                        class="reveal-element delay-2 bg-light-surface rounded-2xl border border-light-border overflow-hidden flex flex-col group card-hover shadow-sm">
+                        <div class="p-4 pb-0">
+                            <div
+                                class="h-48 bg-white rounded-xl border border-light-border p-4 flex items-center justify-center overflow-hidden">
+                                <img src="assets/forma.png" alt="FORMA"
+                                    class="h-full w-auto max-w-full object-contain group-hover:scale-[1.03] transition-transform duration-300">
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex items-center justify-between gap-2 mb-3">
+                                <span
+                                    class="font-mono text-xl font-bold text-light-border group-hover:text-light-textMuted transition-colors select-none">02</span>
+                            </div>
+                            <h3
+                                class="text-xl font-bold text-light-textDark mb-2.5 group-hover:text-light-slate transition-colors">
+                                FORMA
+                            </h3>
+                            <p class="text-light-textMuted text-sm mb-6 flex-grow leading-relaxed">
+                                Sistema de gestión educativa orientado a organizar, administrar y dar seguimiento a
+                                diferentes procesos de formación. Centraliza información académica y facilita el control
+                                de los procesos educativos desde una plataforma digital.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 03: Módulo de OKR — SIIF -->
+                    <article
+                        class="reveal-element delay-3 bg-light-surface rounded-2xl border border-light-border overflow-hidden flex flex-col group card-hover shadow-sm">
+                        <div class="p-4 pb-0">
+                            <div
+                                class="h-48 bg-white rounded-xl border border-light-border p-4 flex items-center justify-center overflow-hidden">
+                                <img src="assets/okr.png" alt="Módulo de OKR — SIIF"
+                                    class="h-full w-auto max-w-full object-contain group-hover:scale-[1.03] transition-transform duration-300">
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex items-center justify-between gap-2 mb-3">
+                                <span
+                                    class="font-mono text-xl font-bold text-light-border group-hover:text-light-textMuted transition-colors select-none">03</span>
+                            </div>
+                            <h3
+                                class="text-xl font-bold text-light-textDark mb-2.5 group-hover:text-light-slate transition-colors">
+                                Módulo de OKR
+                            </h3>
+                            <p class="text-light-textMuted text-sm mb-6 flex-grow leading-relaxed">
+                                Módulo desarrollado e integrado en el Sistema de Información Institucional FUSALMO para
+                                gestionar objetivos y resultados clave. Permite registrar objetivos institucionales,
+                                asignar responsables, actualizar avances y visualizar el cumplimiento de resultados
+                                clave.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 04: ECO System -->
+                    <article
+                        class="reveal-element delay-1 bg-light-surface rounded-2xl border border-light-border overflow-hidden flex flex-col group card-hover shadow-sm">
+                        <div class="p-4 pb-0">
+                            <div
+                                class="h-48 bg-white rounded-xl border border-light-border p-4 flex items-center justify-center overflow-hidden">
+                                <img src="assets/ecosystem.png" alt="ECO System"
+                                    class="h-full w-auto max-w-full object-contain group-hover:scale-[1.03] transition-transform duration-300">
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex items-center justify-between gap-2 mb-3">
+                                <span
+                                    class="font-mono text-xl font-bold text-light-border group-hover:text-light-textMuted transition-colors select-none">04</span>
+                            </div>
+                            <h3
+                                class="text-xl font-bold text-light-textDark mb-2.5 group-hover:text-light-slate transition-colors">
+                                ECO System
+                            </h3>
+                            <p class="text-light-textMuted text-sm mb-6 flex-grow leading-relaxed">
+                                Sistema para el estudio y medición del clima organizacional desarrollado para el
+                                Registro Nacional de las Personas Naturales de El Salvador. Permite recopilar
+                                información mediante evaluaciones, procesar resultados y facilitar el análisis del
+                                ambiente laboral dentro de la institución.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="experiencia" class="py-24 px-6 border-t border-light-border bg-light-surface">
+            <div class="max-w-4xl mx-auto">
+                <div class="reveal-element text-center mb-16">
+                    <span class="text-xs font-mono uppercase tracking-widest text-light-textMuted block mb-2">02.
+                        Trayectoria</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-light-textDark tracking-tight">Línea de Tiempo
+                        Laboral</h2>
+                    <p class="text-light-textMuted text-sm max-w-md mx-auto mt-2">Mi experiencia profesional y evolución
+                        técnica a lo largo del tiempo.</p>
+                </div>
+
+                <!-- Timeline Container -->
+                <div class="relative pl-6 sm:pl-8 md:pl-0">
+                    <!-- Vertical Line -->
+                    <div
+                        class="timeline-line absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-light-border -translate-x-1/2 z-0">
+                    </div>
+
+                    <!-- Timeline Item 1: KEEYCODE -->
+                    <div class="reveal-element relative mb-12 md:mb-16 md:flex md:justify-between items-center group">
+                        <div class="hidden md:block w-5/12 text-right pr-8">
+                            <span
+                                class="font-mono text-xs font-semibold px-3 py-1 rounded-full bg-light-subtle text-light-slate border border-light-border">2026
+                                – Actualidad</span>
+                            <h4 class="text-sm font-semibold text-light-textMuted mt-2">KEEYCODE</h4>
+                        </div>
+
+                        <!-- Marker Icon -->
+                        <div
+                            class="absolute -left-6 md:left-1/2 top-0 md:top-auto -translate-x-1/2 w-8 h-8 rounded-full bg-light-surface border-2 border-light-textDark flex items-center justify-center z-10 shadow-sm group-hover:bg-light-textDark group-hover:text-white transition-colors">
+                            <i data-lucide="briefcase" class="w-3.5 h-3.5"></i>
+                        </div>
+
+                        <div class="md:w-5/12 pl-4 md:pl-8">
+                            <div class="bg-light-bg p-6 rounded-2xl border border-light-border card-hover">
+                                <div
+                                    class="md:hidden mb-3 flex flex-wrap items-center justify-between gap-2 border-b border-light-border/60 pb-2.5">
+                                    <span
+                                        class="font-mono text-xs font-semibold px-2.5 py-0.5 rounded-full bg-light-subtle text-light-slate border border-light-border">2026
+                                        – Actualidad</span>
+                                    <span class="text-xs font-semibold text-light-textMuted">KEEYCODE</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-light-textDark mb-2">Co-Fundador</h3>
+                                <p class="text-sm text-light-textMuted leading-relaxed mb-4">
+                                    Co-fundador de una iniciativa tecnológica enfocada en el diseño y desarrollo de
+                                    soluciones digitales. Participo en la planificación, análisis de requerimientos,
+                                    desarrollo de sistemas web y creación de soluciones funcionales desde la idea hasta
+                                    su implementación.
+                                </p>
+                                <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-light-subtle text-light-slate border border-light-border">Laravel</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-light-subtle text-light-slate border border-light-border">PHP</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-light-subtle text-light-slate border border-light-border">MySQL</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-light-subtle text-light-slate border border-light-border">JavaScript</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-light-subtle text-light-slate border border-light-border">HTML5</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-light-subtle text-light-slate border border-light-border">CSS3</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-light-subtle text-light-slate border border-light-border">Git</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2: FUSALMO -->
+                    <div
+                        class="reveal-element delay-1 relative mb-12 md:mb-16 md:flex md:justify-between items-center group">
+                        <div class="w-full md:w-5/12 pl-4 md:pl-0 md:pr-8 md:text-right order-1 md:order-1">
+                            <div class="bg-light-bg p-6 rounded-2xl border border-light-border card-hover">
+                                <div
+                                    class="md:hidden mb-3 flex flex-wrap items-center justify-between gap-2 border-b border-light-border/60 pb-2.5 text-left">
+                                    <span
+                                        class="font-mono text-xs font-semibold px-2.5 py-0.5 rounded-full bg-light-subtle text-light-slate border border-light-border">Diciembre
+                                        2024 – Actualidad</span>
+                                    <span class="text-xs font-semibold text-light-textMuted">FUNDACIÓN SALVADOR DEL
+                                        MUNDO (FUSALMO)</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-light-textDark mb-2">Programador Jr.</h3>
+                                <p class="text-sm text-light-textMuted leading-relaxed mb-4 text-left md:text-right">
+                                    Desarrollo, mantenimiento y seguimiento de sistemas educativos institucionales como
+                                    <strong>STEAM Maker Challenge Live Scoring System</strong> y <strong>FORMA
+                                        360</strong>. He participado en <strong>FIRST Global Challenge</strong> y en
+                                    <strong>FIRST Tech Challenge</strong> a nivel nacional, encargándome de la gestión y
+                                    operación del sistema utilizado durante la competencia.
+                                </p>
+                                <div class="flex flex-wrap md:justify-end gap-1.5 font-mono text-[11px]">
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-light-subtle text-light-slate border border-light-border">Laravel</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-light-subtle text-light-slate border border-light-border">PHP</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-light-subtle text-light-slate border border-light-border">MVC</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-light-subtle text-light-slate border border-light-border">MySQL</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-light-subtle text-light-slate border border-light-border">JavaScript</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-light-subtle text-light-slate border border-light-border">AJAX</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-light-subtle text-light-slate border border-light-border">Git</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Marker Icon -->
+                        <div
+                            class="absolute -left-6 md:left-1/2 top-0 md:top-auto -translate-x-1/2 w-8 h-8 rounded-full bg-light-surface border-2 border-light-textDark flex items-center justify-center z-10 shadow-sm group-hover:bg-light-textDark group-hover:text-white transition-colors">
+                            <i data-lucide="code" class="w-3.5 h-3.5"></i>
+                        </div>
+
+                        <div class="hidden md:block w-5/12 text-left pl-8 order-2 md:order-2">
+                            <span
+                                class="font-mono text-xs font-semibold px-3 py-1 rounded-full bg-light-subtle text-light-slate border border-light-border">Diciembre
+                                2024 – Actualidad</span>
+                            <h4 class="text-sm font-semibold text-light-textMuted mt-2">FUNDACIÓN SALVADOR DEL MUNDO
+                                (FUSALMO)</h4>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3: RNPN -->
+                    <div class="reveal-element delay-2 relative md:flex md:justify-between items-center group">
+                        <div class="hidden md:block w-5/12 text-right pr-8">
+                            <span
+                                class="font-mono text-xs font-semibold px-3 py-1 rounded-full bg-light-subtle text-light-slate border border-light-border">Junio
+                                2023 – Septiembre 2023</span>
+                            <h4 class="text-sm font-semibold text-light-textMuted mt-2">REGISTRO NACIONAL DE LAS
+                                PERSONAS NATURALES (RNPN)</h4>
+                        </div>
+
+                        <!-- Marker Icon -->
+                        <div
+                            class="absolute -left-6 md:left-1/2 top-0 md:top-auto -translate-x-1/2 w-8 h-8 rounded-full bg-light-surface border-2 border-light-textDark flex items-center justify-center z-10 shadow-sm group-hover:bg-light-textDark group-hover:text-white transition-colors">
+                            <i data-lucide="terminal" class="w-3.5 h-3.5"></i>
+                        </div>
+
+                        <div class="md:w-5/12 pl-4 md:pl-8">
+                            <div class="bg-light-bg p-6 rounded-2xl border border-light-border card-hover">
+                                <div
+                                    class="md:hidden mb-3 flex flex-wrap items-center justify-between gap-2 border-b border-light-border/60 pb-2.5">
+                                    <span
+                                        class="font-mono text-xs font-semibold px-2.5 py-0.5 rounded-full bg-light-subtle text-light-slate border border-light-border">Junio
+                                        2023 – Septiembre 2023</span>
+                                    <span class="text-xs font-semibold text-light-textMuted">REGISTRO NACIONAL DE LAS
+                                        PERSONAS NATURALES (RNPN)</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-light-textDark mb-2">Prácticas Profesionales</h3>
+                                <p class="text-sm text-light-textMuted leading-relaxed mb-4">
+                                    Desarrollo de un <strong>sistema para la gestión del clima organizacional</strong>
+                                    utilizando Java Web y JSF. Implementación de módulos de reportería en Excel para
+                                    automatizar el análisis y la presentación de resultados.
+                                </p>
+                                <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-light-subtle text-light-slate border border-light-border">Java</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-light-subtle text-light-slate border border-light-border">JSF</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-light-subtle text-light-slate border border-light-border">SQL
+                                        Server</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-light-subtle text-light-slate border border-light-border">Excel</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-light-subtle text-light-slate border border-light-border">HTML</span>
+                                    <span
+                                        class="px-2 py-0.5 rounded bg-light-subtle text-light-slate border border-light-border">CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="py-24 px-6 border-t border-light-border bg-light-surface">
+            <div class="max-w-6xl mx-auto">
+                <div class="reveal-element text-center mb-16">
+                    <span class="text-xs font-mono uppercase tracking-widest text-light-textMuted block mb-2">03.
+                        Formación Académica</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-light-textDark tracking-tight">Educación &
+                        Certificaciones</h2>
+                    <p class="text-light-textMuted text-sm max-w-md mx-auto mt-2">
+                        Mi preparación académica y credenciales profesionales obtenidas.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start">
+
+                    <!-- Bloque 1: Educación -->
+                    <div class="space-y-6">
+                        <div class="reveal-element flex items-center gap-3 mb-6 pb-3 border-b border-light-border">
+                            <div
+                                class="w-9 h-9 rounded-xl bg-light-bg border border-light-border flex items-center justify-center text-light-textDark shadow-sm">
+                                <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-light-textDark tracking-tight">Educación</h3>
+                        </div>
+
+                        <div class="space-y-4">
+                            <!-- Educación 1 -->
+                            <div
+                                class="reveal-element bg-light-bg border border-light-border rounded-2xl p-6 card-hover shadow-sm relative overflow-hidden group">
+                                <div class="flex items-start justify-between gap-4 mb-2">
+                                    <div>
+                                        <h4
+                                            class="text-base font-bold text-light-textDark group-hover:text-light-slate transition-colors">
+                                            Ingeniería en Ciencias de la Computación</h4>
+                                        <p class="text-sm text-light-textMuted mt-1">Universidad Don Bosco</p>
+                                    </div>
+                                    <span
+                                        class="font-mono text-xl font-bold text-light-border group-hover:text-light-textMuted transition-colors select-none">01</span>
+                                </div>
+                                <div class="flex items-center justify-between pt-2">
+                                    <span class="font-mono text-xs text-light-textMuted">2024 – Actualidad</span>
+                                    <span
+                                        class="font-mono text-xs font-semibold px-2.5 py-0.5 rounded-full bg-light-subtle text-light-slate border border-light-border">En
+                                        curso</span>
+                                </div>
+                            </div>
+
+                            <!-- Educación 2 -->
+                            <div
+                                class="reveal-element delay-1 bg-light-bg border border-light-border rounded-2xl p-6 card-hover shadow-sm relative overflow-hidden group">
+                                <div class="flex items-start justify-between gap-4">
+                                    <div>
+                                        <h4
+                                            class="text-base font-bold text-light-textDark group-hover:text-light-slate transition-colors">
+                                            Técnico en Ingeniería en Computación (PILET)</h4>
+                                        <p class="text-sm text-light-textMuted mt-1">Universidad Don Bosco</p>
+                                        <p class="font-mono text-xs text-light-textMuted mt-2">2022 – 2023</p>
+                                    </div>
+                                    <span
+                                        class="font-mono text-xl font-bold text-light-border group-hover:text-light-textMuted transition-colors select-none">02</span>
+                                </div>
+                            </div>
+
+                            <!-- Educación 3 -->
+                            <div
+                                class="reveal-element delay-2 bg-light-bg border border-light-border rounded-2xl p-6 card-hover shadow-sm relative overflow-hidden group">
+                                <div class="flex items-start justify-between gap-4">
+                                    <div>
+                                        <h4
+                                            class="text-base font-bold text-light-textDark group-hover:text-light-slate transition-colors">
+                                            Bachillerato Vocacional Técnico en Desarrollo de Software</h4>
+                                        <p class="text-sm text-light-textMuted mt-1">Colegio Don Bosco</p>
+                                        <p class="font-mono text-xs text-light-textMuted mt-2">2020 – 2022</p>
+                                    </div>
+                                    <span
+                                        class="font-mono text-xl font-bold text-light-border group-hover:text-light-textMuted transition-colors select-none">03</span>
+                                </div>
+                            </div>
+
+                            <!-- Educación 4 -->
+                            <div
+                                class="reveal-element delay-3 bg-light-bg border border-light-border rounded-2xl p-6 card-hover shadow-sm relative overflow-hidden group">
+                                <div class="flex items-start justify-between gap-4">
+                                    <div>
+                                        <h4
+                                            class="text-base font-bold text-light-textDark group-hover:text-light-slate transition-colors">
+                                            Dominio del idioma inglés</h4>
+                                        <p class="text-sm text-light-textMuted mt-1">Academia Europea</p>
+                                        <p class="font-mono text-xs text-light-textMuted mt-2">2016 – 2020</p>
+                                    </div>
+                                    <span
+                                        class="font-mono text-xl font-bold text-light-border group-hover:text-light-textMuted transition-colors select-none">04</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bloque 2: Certificaciones Profesionales -->
+                    <div class="space-y-6">
+                        <div class="reveal-element flex items-center gap-3 mb-6 pb-3 border-b border-light-border">
+                            <div
+                                class="w-9 h-9 rounded-xl bg-light-bg border border-light-border flex items-center justify-center text-light-textDark shadow-sm">
+                                <i data-lucide="award" class="w-4 h-4"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-light-textDark tracking-tight">Certificaciones
+                                Profesionales</h3>
+                        </div>
+
+                        <div class="space-y-4">
+                            <!-- Certificación 1 -->
+                            <div
+                                class="reveal-element bg-light-bg border border-light-border rounded-2xl p-6 card-hover shadow-sm group">
+                                <div class="flex items-start justify-between gap-3 mb-3">
+                                    <div class="flex items-center gap-2.5">
+                                        <div
+                                            class="w-7 h-7 rounded-lg bg-light-surface border border-light-border flex items-center justify-center text-light-textDark flex-shrink-0">
+                                            <i data-lucide="shield-check" class="w-4 h-4"></i>
+                                        </div>
+                                        <span
+                                            class="font-mono text-xs font-semibold px-2.5 py-0.5 rounded-full bg-light-subtle text-light-slate border border-light-border">Certiport</span>
+                                    </div>
+                                    <span
+                                        class="font-mono text-xs font-medium px-2 py-0.5 rounded bg-light-surface text-light-slate border border-light-border">Python</span>
+                                </div>
+                                <h4
+                                    class="text-base font-bold text-light-textDark group-hover:text-light-slate transition-colors">
+                                    Information Technology Specialist: Python</h4>
+                            </div>
+
+                            <!-- Certificación 2 -->
+                            <div
+                                class="reveal-element delay-1 bg-light-bg border border-light-border rounded-2xl p-6 card-hover shadow-sm group">
+                                <div class="flex items-start justify-between gap-3 mb-3">
+                                    <div class="flex items-center gap-2.5">
+                                        <div
+                                            class="w-7 h-7 rounded-lg bg-light-surface border border-light-border flex items-center justify-center text-light-textDark flex-shrink-0">
+                                            <i data-lucide="shield-check" class="w-4 h-4"></i>
+                                        </div>
+                                        <span
+                                            class="font-mono text-xs font-semibold px-2.5 py-0.5 rounded-full bg-light-subtle text-light-slate border border-light-border">Certiport</span>
+                                    </div>
+                                    <span
+                                        class="font-mono text-xs font-medium px-2 py-0.5 rounded bg-light-surface text-light-slate border border-light-border">JavaScript</span>
+                                </div>
+                                <h4
+                                    class="text-base font-bold text-light-textDark group-hover:text-light-slate transition-colors">
+                                    Information Technology Specialist: JavaScript</h4>
+                            </div>
+
+                            <!-- Certificación 3 -->
+                            <div
+                                class="reveal-element delay-2 bg-light-bg border border-light-border rounded-2xl p-6 card-hover shadow-sm group">
+                                <div class="flex items-start justify-between gap-3 mb-3">
+                                    <div class="flex items-center gap-2.5">
+                                        <div
+                                            class="w-7 h-7 rounded-lg bg-light-surface border border-light-border flex items-center justify-center text-light-textDark flex-shrink-0">
+                                            <i data-lucide="shield-check" class="w-4 h-4"></i>
+                                        </div>
+                                        <span
+                                            class="font-mono text-xs font-semibold px-2.5 py-0.5 rounded-full bg-light-subtle text-light-slate border border-light-border">Certiport</span>
+                                    </div>
+                                    <span
+                                        class="font-mono text-xs font-medium px-2 py-0.5 rounded bg-light-surface text-light-slate border border-light-border">Java</span>
+                                </div>
+                                <h4
+                                    class="text-base font-bold text-light-textDark group-hover:text-light-slate transition-colors">
+                                    Information Technology Specialist: Java</h4>
+                            </div>
+
+                            <!-- Certificación 4 -->
+                            <div
+                                class="reveal-element delay-3 bg-light-bg border border-light-border rounded-2xl p-6 card-hover shadow-sm group">
+                                <div class="flex items-start justify-between gap-3 mb-3">
+                                    <div class="flex items-center gap-2.5">
+                                        <div
+                                            class="w-7 h-7 rounded-lg bg-light-surface border border-light-border flex items-center justify-center text-light-textDark flex-shrink-0">
+                                            <i data-lucide="award" class="w-4 h-4"></i>
+                                        </div>
+                                        <span
+                                            class="font-mono text-xs font-semibold px-2.5 py-0.5 rounded-full bg-light-subtle text-light-slate border border-light-border">Platzi</span>
+                                    </div>
+                                    <span class="font-mono text-xs text-light-textMuted">2025</span>
+                                </div>
+                                <h4
+                                    class="text-base font-bold text-light-textDark group-hover:text-light-slate transition-colors mb-2">
+                                    Liderazgo Integrador</h4>
+                                <p class="text-xs font-mono text-light-textMuted">ID:
+                                    446a5cbf-a177-4141-b0e0-bec85b90af43</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="py-24 px-6 border-t border-light-border bg-light-surface">
+            <div class="max-w-6xl mx-auto">
+                <div class="reveal-element text-center mb-16">
+                    <span class="text-xs font-mono uppercase tracking-widest text-light-textMuted block mb-2">04.
+                        Contacto</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold text-light-textDark tracking-tight mb-4">Contacto</h2>
+                    <p class="text-light-textMuted max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+                        ¿Tienes un proyecto o una idea en mente?<br class="hidden sm:inline">
+                        Estoy disponible para colaborar en proyectos de desarrollo de software, plataformas web y
+                        soluciones digitales. Puedes contactarme directamente mediante cualquiera de los siguientes
+                        medios.
+                    </p>
+                </div>
+
+                <!-- Tarjetas de Contacto Directo: 3 Columnas en Escritorio / 2 en Tablet / 1 en Móvil -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Tarjeta 1: Correo electrónico -->
+                    <a href="mailto:josuue.vasquezz@gmail.com"
+                        class="reveal-element bg-white border border-[#DEE2E6] rounded-2xl p-6 card-hover shadow-sm flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1">
+                        <div>
+                            <div class="flex items-center justify-between gap-3 mb-4">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-light-bg border border-light-border flex items-center justify-center text-light-textDark group-hover:bg-light-textDark group-hover:text-white transition-colors">
+                                    <i data-lucide="mail" class="w-5 h-5"></i>
+                                </div>
+                                <i data-lucide="arrow-up-right"
+                                    class="w-5 h-5 text-light-textMuted group-hover:text-light-textDark transition-colors"></i>
+                            </div>
+                            <h3
+                                class="text-xs font-mono uppercase tracking-wider text-light-textMuted mb-2 font-semibold">
+                                Correo electrónico</h3>
+                            <p
+                                class="text-base font-bold text-light-textDark group-hover:text-light-slate transition-colors [overflow-wrap:anywhere]">
+                                josuue.vasquezz@gmail.com
+                            </p>
+                        </div>
+                    </a>
+
+                    <!-- Tarjeta 2: LinkedIn -->
+                    <a href="https://www.linkedin.com/in/josu%C3%A9-v%C3%A1squez-7a5216388/" target="_blank"
+                        rel="noopener noreferrer"
+                        class="reveal-element delay-1 bg-white border border-[#DEE2E6] rounded-2xl p-6 card-hover shadow-sm flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1">
+                        <div>
+                            <div class="flex items-center justify-between gap-3 mb-4">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-light-bg border border-light-border flex items-center justify-center text-light-textDark group-hover:bg-light-textDark group-hover:text-white transition-colors">
+                                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path
+                                            d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                                    </svg>
+                                </div>
+                                <i data-lucide="arrow-up-right"
+                                    class="w-5 h-5 text-light-textMuted group-hover:text-light-textDark transition-colors"></i>
+                            </div>
+                            <h3
+                                class="text-xs font-mono uppercase tracking-wider text-light-textMuted mb-2 font-semibold">
+                                LinkedIn</h3>
+                            <p
+                                class="text-base font-bold text-light-textDark group-hover:text-light-slate transition-colors [overflow-wrap:anywhere]">
+                                Josué Vásquez
+                            </p>
+                        </div>
+                    </a>
+
+                    <!-- Tarjeta 3: Sitio web -->
+                    <a href="https://keeycode.com/" target="_blank" rel="noopener noreferrer"
+                        class="reveal-element delay-2 bg-white border border-[#DEE2E6] rounded-2xl p-6 card-hover shadow-sm flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1">
+                        <div>
+                            <div class="flex items-center justify-between gap-3 mb-4">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-light-bg border border-light-border flex items-center justify-center text-light-textDark group-hover:bg-light-textDark group-hover:text-white transition-colors">
+                                    <i data-lucide="globe" class="w-5 h-5"></i>
+                                </div>
+                                <i data-lucide="arrow-up-right"
+                                    class="w-5 h-5 text-light-textMuted group-hover:text-light-textDark transition-colors"></i>
+                            </div>
+                            <h3
+                                class="text-xs font-mono uppercase tracking-wider text-light-textMuted mb-2 font-semibold">
+                                Sitio web</h3>
+                            <p
+                                class="text-base font-bold text-light-textDark group-hover:text-light-slate transition-colors [overflow-wrap:anywhere]">
+                                keeycode.com
+                            </p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#1A1A1A] text-white pt-16 pb-12 px-6 border-t border-[rgba(255,255,255,0.12)]">
+        <div class="max-w-6xl mx-auto">
+
+            <!-- Parte Superior del Footer: 3 Columnas en Escritorio / 2 en Tablet / 1 en Móvil -->
+            <div class="reveal-element grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12 text-left mb-12">
+
+                <!-- Columna 1: Nombre y Descripción -->
+                <div class="space-y-3">
+                    <img src="assets/jv_blanco.png" alt="Josué Vásquez" class="h-16 sm:h-20 w-auto object-contain">
+                    <p class="text-sm text-[#ADB5BD] leading-relaxed max-w-sm">
+                        Desarrollo soluciones digitales enfocadas en optimizar procesos, conectar ideas y generar
+                        resultados.
+                    </p>
+                </div>
+
+                <!-- Columna 2: Navegación Interna -->
+                <div>
+                    <h4 class="text-xs font-mono uppercase tracking-wider text-[#ADB5BD] mb-4 font-semibold">Navegación
+                    </h4>
+                    <ul class="space-y-2.5 text-sm font-medium">
+                        <li>
+                            <a href="#inicio"
+                                class="text-[#ADB5BD] hover:text-white transition-colors inline-block">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="#proyectos"
+                                class="text-[#ADB5BD] hover:text-white transition-colors inline-block">Proyectos</a>
+                        </li>
+                        <li>
+                            <a href="#experiencia"
+                                class="text-[#ADB5BD] hover:text-white transition-colors inline-block">Experiencia</a>
+                        </li>
+                        <li>
+                            <a href="#habilidades"
+                                class="text-[#ADB5BD] hover:text-white transition-colors inline-block">Educación</a>
+                        </li>
+                        <li>
+                            <a href="#contacto"
+                                class="text-[#ADB5BD] hover:text-white transition-colors inline-block">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Información de Contacto -->
+                <div>
+                    <h4 class="text-xs font-mono uppercase tracking-wider text-[#ADB5BD] mb-4 font-semibold">Contacto
+                        Directo</h4>
+                    <ul class="space-y-3 text-sm font-medium">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-[#ADB5BD] flex-shrink-0"></i>
+                            <a href="mailto:josuue.vasquezz@gmail.com"
+                                class="text-[#ADB5BD] hover:text-white transition-colors [overflow-wrap:anywhere]">
+                                josuue.vasquezz@gmail.com
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 fill-current text-[#ADB5BD] flex-shrink-0" viewBox="0 0 24 24"
+                                aria-hidden="true">
+                                <path
+                                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                            </svg>
+                            <a href="https://www.linkedin.com/in/josu%C3%A9-v%C3%A1squez-7a5216388/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-[#ADB5BD] hover:text-white transition-colors [overflow-wrap:anywhere]">
+                                linkedin.com/in/josué-vásquez-7a5216388
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="globe" class="w-4 h-4 text-[#ADB5BD] flex-shrink-0"></i>
+                            <a href="https://keeycode.com/" target="_blank" rel="noopener noreferrer"
+                                class="text-[#ADB5BD] hover:text-white transition-colors [overflow-wrap:anywhere]">
+                                keeycode.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Línea Divisoria -->
+            <div class="border-t border-[rgba(255,255,255,0.12)] pt-8">
+                <div
+                    class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-[#ADB5BD]">
+                    <p>© <span id="current-year"></span> Josué Vásquez. Todos los derechos reservados.</p>
+                    <p class="font-mono text-xs">Diseñado y desarrollado con propósito.</p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Modal para Proyectos -->
+    <div id="projectModal"
+        class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden items-center justify-center p-6">
+        <div class="bg-light-surface border border-light-border max-w-lg w-full rounded-2xl p-6 relative shadow-2xl">
+            <button onclick="closeModal()"
+                class="absolute top-4 right-4 text-light-textMuted hover:text-light-textDark">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <h3 id="modalTitle" class="text-xl font-bold text-light-textDark mb-3"></h3>
+            <p id="modalDescription" class="text-light-textMuted text-sm leading-relaxed mb-6"></p>
+            <button onclick="closeModal()"
+                class="w-full py-2.5 rounded-xl bg-light-bg text-light-textDark border border-light-border text-sm font-medium hover:bg-light-subtle transition-colors">
+                Cerrar
+            </button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
